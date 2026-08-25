@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Modulos/" />
+  <Folder Name="/Modulos/Autenticacao/">
+    <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Dominio/Modulos.Autenticacao.Dominio.csproj" />
+  </Folder>
+</Solution>
