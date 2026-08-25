@@ -9,7 +9,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | Task | Status |
 |---|---|
 | [01 - Domínio: entidade Usuario](autenticacao/01-domain-usuario.md) | feito |
-| [02 - Domínio: testes unitários da entidade Usuario](autenticacao/02-testes-usuario.md) | todo |
+| [02 - Domínio: testes unitários da entidade Usuario](autenticacao/02-testes-usuario.md) | feito |
 
 ## Módulo Catálogo
 
