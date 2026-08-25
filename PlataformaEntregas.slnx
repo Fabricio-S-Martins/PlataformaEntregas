@@ -1,8 +1,10 @@
 <Solution>
   <Folder Name="/Modulos/" />
   <Folder Name="/Modulos/Autenticacao/">
+    <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Aplicacao/Modulos.Autenticacao.Aplicacao.csproj" />
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Dominio/Modulos.Autenticacao.Dominio.csproj" />
   </Folder>
+  <Folder Name="/Testes/" />
   <Folder Name="/Testes/Autenticacao/">
     <Project Path="Testes/Autenticacao/Modulos.Autenticacao.Dominio.Testes/Modulos.Autenticacao.Dominio.Testes.csproj" />
   </Folder>
