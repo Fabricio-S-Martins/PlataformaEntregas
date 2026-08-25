@@ -28,6 +28,7 @@ Referência: https://github.com/jbogard/MediatR/wiki
    - **O salt gerado precisa ser persistido junto com o hash** (ex: concatenado no mesmo campo, ou em campo separado) — sem o salt original, não é possível validar a senha depois no login.
    - Instancia um `Usuario` a partir dos dados do Command (com a senha já hasheada).
    - Chama o repositório para adicionar o usuário.
+6. Criar um método de extensão de `IServiceCollection` em `InjecaoDeDependencia.cs`, solto na raiz do projeto (sem subpasta), que registra o `MediatR` apontando para os handlers deste assembly — para a futura API chamar na composição de DI.
 
 ## Arquivos a criar/alterar
 
@@ -35,6 +36,7 @@ Referência: https://github.com/jbogard/MediatR/wiki
 - `Modulos/Autenticacao/Modulos.Autenticacao.Aplicacao/Repositorios/IUsuarioRepositorio.cs`
 - `Modulos/Autenticacao/Modulos.Autenticacao.Aplicacao/CasosDeUso/CriarUsuario/CriarUsuarioCommand.cs`
 - `Modulos/Autenticacao/Modulos.Autenticacao.Aplicacao/CasosDeUso/CriarUsuario/CriarUsuarioHandler.cs`
+- `Modulos/Autenticacao/Modulos.Autenticacao.Aplicacao/InjecaoDeDependencia.cs` (raiz do projeto, sem subpasta)
 
 ## Checklist
 
@@ -45,6 +47,7 @@ Referência: https://github.com/jbogard/MediatR/wiki
 - [ ] `CriarUsuarioHandler` criado em `CasosDeUso/CriarUsuario/`, injetando `IUsuarioRepositorio` e criando o `Usuario` a partir do Command
 - [ ] Senha é hasheada com algoritmo que usa salt (ex: PBKDF2), antes de criar o `Usuario`
 - [ ] Salt é persistido junto com o hash (não descartado após o cálculo)
+- [ ] `InjecaoDeDependencia.cs` criado, registrando o `MediatR` para os handlers do assembly
 
 ## Notas / decisões tomadas
 
