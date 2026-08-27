@@ -6,6 +6,7 @@
   </Folder>
   <Folder Name="/Testes/" />
   <Folder Name="/Testes/Autenticacao/">
+    <Project Path="Testes/Autenticacao/Modulos.Autenticacao.Aplicacao.Testes/Modulos.Autenticacao.Aplicacao.Testes.csproj" />
     <Project Path="Testes/Autenticacao/Modulos.Autenticacao.Dominio.Testes/Modulos.Autenticacao.Dominio.Testes.csproj" />
   </Folder>
 </Solution>

@@ -10,7 +10,8 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 |---|---|
 | [01 - Domínio: entidade Usuario](autenticacao/01-domain-usuario.md) | feito |
 | [02 - Domínio: testes unitários da entidade Usuario](autenticacao/02-testes-usuario.md) | feito |
-| [03 - Aplicação: caso de uso Criar Usuário](autenticacao/03-aplicacao-criar-usuario.md) | todo |
+| [03 - Aplicação: caso de uso Criar Usuário](autenticacao/03-aplicacao-criar-usuario.md) | feito |
+| [04 - Aplicação: testes do caso de uso Criar Usuário](autenticacao/04-testes-criar-usuario.md) | feito |
 | [XX - Domínio: reforçar validação de invariantes do Usuario](autenticacao/XX-validacoes-usuario.md) | backlog (a detalhar) |
 
 ## Módulo Catálogo
