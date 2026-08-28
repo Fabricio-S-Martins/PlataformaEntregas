@@ -12,6 +12,8 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [02 - Domínio: testes unitários da entidade Usuario](autenticacao/02-testes-usuario.md) | feito |
 | [03 - Aplicação: caso de uso Criar Usuário](autenticacao/03-aplicacao-criar-usuario.md) | feito |
 | [04 - Aplicação: testes do caso de uso Criar Usuário](autenticacao/04-testes-criar-usuario.md) | feito |
+| [05 - Infraestrutura: subir PostgreSQL via Docker Compose](autenticacao/05-docker-postgres.md) | feito |
+| [06 - Infraestrutura: implementação real do IUsuarioRepositorio com EF Core](autenticacao/06-infraestrutura-usuario-repositorio.md) | todo |
 | [XX - Domínio: reforçar validação de invariantes do Usuario](autenticacao/XX-validacoes-usuario.md) | backlog (a detalhar) |
 
 ## Módulo Catálogo
