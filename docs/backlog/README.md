@@ -15,6 +15,8 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [05 - Infraestrutura: subir PostgreSQL via Docker Compose](autenticacao/05-docker-postgres.md) | feito |
 | [06 - Infraestrutura: implementação real do IUsuarioRepositorio com EF Core](autenticacao/06-infraestrutura-usuario-repositorio.md) | todo |
 | [XX - Domínio: reforçar validação de invariantes do Usuario](autenticacao/XX-validacoes-usuario.md) | backlog (a detalhar) |
+| [XX - Infraestrutura: fábrica de design-time e primeira Migration](autenticacao/XX-migration-inicial.md) | backlog (a detalhar) |
+| [XX - Infraestrutura: avaliar Persistence Model separado do Domínio](autenticacao/XX-persistence-model.md) | backlog (a detalhar) |
 
 ## Módulo Catálogo
 

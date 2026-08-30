@@ -5,6 +5,7 @@ namespace Modulos.Autenticacao.Dominio.Entidades;
 
 public class Usuario
 {
+    private Usuario(){}
     public Usuario(string nome, string email, string senhaHash, Papel papel)
     {
         Id = Guid.NewGuid();
