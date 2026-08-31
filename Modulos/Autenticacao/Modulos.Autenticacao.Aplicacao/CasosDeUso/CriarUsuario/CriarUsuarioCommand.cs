@@ -1,5 +1,4 @@
 using MediatR;
-using Modulos.Autenticacao.Dominio.Entidades;
 
 namespace Modulos.Autenticacao.Aplicacao.CasosDeUso.CriarUsuario;
 

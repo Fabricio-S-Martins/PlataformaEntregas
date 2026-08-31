@@ -11,8 +11,7 @@ public static class InjecaoDeDependencia
 {
     public static void RegistrarAutenticacaoInfraestrutura(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddEntityFrameworkNpgsql().AddDbContext<AutenticacaoDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("BasePlataformaEntregas")));
-
+        services.AddDbContext<AutenticacaoDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("BasePlataformaEntregas")));
         services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
     }
 }

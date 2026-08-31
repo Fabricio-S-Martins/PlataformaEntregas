@@ -2,7 +2,7 @@
 
 **Módulo:** Autenticação
 **Camada:** Infraestrutura
-**Status:** backlog (não detalhada ainda — número/ordem definidos quando entrar na fila)
+**Status:** resolvida (task 07)
 
 ## Contexto
 
@@ -16,3 +16,7 @@ Decisão: adiar a fábrica de design-time e a primeira Migration para quando exi
 - Se faz sentido já configurar `dotnet ef` para usar o projeto de API como "startup project" (`--startup-project`), evitando a fábrica de design-time por completo.
 
 Esta task será detalhada (com "O que fazer", arquivos exatos e checklist) quando chegar a vez dela no backlog — por ora é só um marcador pra não perder o contexto.
+
+## Resolução
+
+Na task 07, o projeto `Modulos.Autenticacao.Api` foi criado como host real. A fábrica de design-time acabou não sendo necessária: a Migration foi gerada e aplicada usando a própria API como `--startup-project` do `dotnet ef` (segunda opção listada acima em "A discutir"), reaproveitando a configuração/DI já existente no host, sem precisar de `IDesignTimeDbContextFactory`.

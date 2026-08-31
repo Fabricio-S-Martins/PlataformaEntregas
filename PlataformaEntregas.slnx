@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Modulos/" />
   <Folder Name="/Modulos/Autenticacao/">
+    <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Api/Modulos.Autenticacao.Api.csproj" />
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Aplicacao/Modulos.Autenticacao.Aplicacao.csproj" />
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Dominio/Modulos.Autenticacao.Dominio.csproj" />
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Infraestrutura/Modulos.Autenticacao.Infraestrutura.csproj" />

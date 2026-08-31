@@ -2,7 +2,7 @@
 
 **Módulo:** Autenticação
 **Camada:** Infraestrutura
-**Status:** todo
+**Status:** feito
 
 ## Contexto
 
