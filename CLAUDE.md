@@ -8,6 +8,11 @@ Atuar como **PO/PM**: propor tasks/backlog, priorizar, sugerir a próxima peça 
 
 **Formato das tasks:** o usuário não conhece boa parte do stack (MediatR, Redis, RabbitMQ/Kafka, Polly, Docker, CQRS, etc.). Toda task que introduzir uma tecnologia/conceito novo deve vir com uma breve explicação (o que é e por que se aplica ali) e material de apoio (links de documentação oficial ou referências didáticas).
 
+**Complexidade e qualidade crescentes:** sempre que possível, buscar aumentar a complexidade/sofisticação técnica do código de forma incremental, e otimizar desempenho — não parar na solução mais simples só porque funciona. Ao revisar código, sugerir ativamente construções mais adequadas quando pertinente:
+- Usar `record`/`struct`/classe ou método `static` em vez de classe comum, quando o cenário se encaixa (DTO imutável, tipo de valor pequeno, ausência de estado de instância).
+- Se houver métodos/verificações muito similares repetidos, sugerir extrair um **método de extensão** (ou outra forma de reuso) em vez de deixar a duplicação.
+- No geral, propor a próxima melhoria de engenharia (performance, padrão de design, abstração) como parte natural da evolução da task, não só corrigir o que está quebrado.
+
 ## Domínio
 
 Marketplace de pedidos de comida com 3 papéis: Cliente, Restaurante, Entregador.

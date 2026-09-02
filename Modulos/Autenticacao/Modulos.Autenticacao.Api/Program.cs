@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Modulos.Autenticacao.Api.Endpoints.CriarUsuario;
+using Modulos.Autenticacao.Api.Endpoints.Login;
 using Modulos.Autenticacao.Aplicacao;
 using Modulos.Autenticacao.Infraestrutura;
 
@@ -16,6 +17,7 @@ var app = builder.Build();
 
 var api = app.MapGroup("/api");
 api.MapUsuariosEndpoints();
+api.MapLoginEndPoint();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

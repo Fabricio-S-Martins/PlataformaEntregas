@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Modulos.Autenticacao.Aplicacao.Repositorios;
 using Modulos.Autenticacao.Dominio.Entidades;
 
@@ -15,5 +16,10 @@ public class UsuarioRepositorio : IUsuarioRepositorio
     {
         await Context.AddAsync(usuario);
         await Context.SaveChangesAsync();
+    }
+
+    public async Task<Usuario> ObterPorEmailAsync(string email)
+    {
+        return await Context.Usuarios.FirstOrDefaultAsync(u => u.Email.Valor == email);
     }
 }
