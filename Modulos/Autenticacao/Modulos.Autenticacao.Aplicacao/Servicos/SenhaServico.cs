@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 
 namespace Modulos.Autenticacao.Aplicacao.Servicos
 {
-    internal class SenhaServico : ISenhaServico
+    public class SenhaServico : ISenhaServico
     {
         private const int SaltSizeBytes = 128 / 8;
         private const int NumBytesRequested = 256 / 8;

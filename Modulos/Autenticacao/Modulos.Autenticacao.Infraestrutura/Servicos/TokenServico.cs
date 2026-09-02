@@ -10,11 +10,11 @@ namespace Modulos.Autenticacao.Infraestrutura.Servicos
 {
     public class TokenServico : ITokenServico
     {
-        private IConfiguration Configuration;
+        private IConfiguration _configuration;
 
         public TokenServico(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
         public string GerarToken(Usuario usuario)
@@ -25,13 +25,13 @@ namespace Modulos.Autenticacao.Infraestrutura.Servicos
                 new Claim(ClaimTypes.Role, usuario.Papel.ToString())
             };
 
-            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Values:JWTKey"]));
+            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Values:JWTKey"]));
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
             var tokeOptions = new JwtSecurityToken(
                 issuer: "https://localhost:5001",
                 audience: "https://localhost:5001",
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(Convert.ToInt16(Configuration["Values:JWTExpires"])),
+                expires: DateTime.UtcNow.AddMinutes(Convert.ToInt16(_configuration["Values:JWTExpires"])),
                 signingCredentials: signinCredentials
             );
 
