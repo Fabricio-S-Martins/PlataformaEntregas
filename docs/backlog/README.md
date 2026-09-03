@@ -16,6 +16,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [06 - Infraestrutura: implementação real do IUsuarioRepositorio com EF Core](autenticacao/06-infraestrutura-usuario-repositorio.md) | feito |
 | [07 - API: endpoint de cadastro de usuário com Minimal API](autenticacao/07-api-criar-usuario.md) | feito |
 | [08 - Criar fluxo de login com JWT e extrair serviço de hash de senha](autenticacao/08-login-jwt.md) | feito |
+| [09 - API: autenticação JWT no pipeline e autorização por papel](autenticacao/09-autorizacao-papel.md) | todo |
 | [XX - Domínio: reforçar validação de invariantes do Usuario](autenticacao/XX-validacoes-usuario.md) | backlog (a detalhar) |
 | [XX - Infraestrutura: fábrica de design-time e primeira Migration](autenticacao/XX-migration-inicial.md) | resolvida (task 07) |
 | [XX - Infraestrutura: avaliar Persistence Model separado do Domínio](autenticacao/XX-persistence-model.md) | backlog (a detalhar) |

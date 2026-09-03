@@ -25,15 +25,13 @@ namespace Modulos.Autenticacao.Infraestrutura.Servicos
                 new Claim(ClaimTypes.Role, usuario.Papel.ToString())
             };
 
-            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Values:JWTKey"]));
+            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["APIConfiguracoes:KeyJWT"]));
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
-            var tokeOptions = new JwtSecurityToken(
-                issuer: "https://localhost:5001",
-                audience: "https://localhost:5001",
-                claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(Convert.ToInt16(_configuration["Values:JWTExpires"])),
-                signingCredentials: signinCredentials
-            );
+            var tokeOptions = new JwtSecurityToken(issuer: _configuration["APIConfiguracoes:Issuer"],
+                                                   audience: _configuration["APIConfiguracoes:Audience"],
+                                                   claims: claims,
+                                                   expires: DateTime.UtcNow.AddMinutes(Convert.ToInt16(_configuration["APIConfiguracoes:ExpiresJWT"])),
+                                                   signingCredentials: signinCredentials);
 
             var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
 

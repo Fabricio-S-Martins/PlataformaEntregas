@@ -8,6 +8,8 @@
 
 appsettings.*.json
 
+runbooks/
+
 # User-specific files
 *.rsuser
 *.suo

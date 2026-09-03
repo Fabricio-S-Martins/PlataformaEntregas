@@ -1,8 +1,9 @@
-namespace Modulos.Autenticacao.Dominio.Enums;
-
-public enum Papel
+namespace Modulos.Autenticacao.Dominio.Enums
 {
-    Cliente, 
-    Restaurante, 
-    Entregador
+    public enum Papel
+    {
+        Cliente, 
+        Restaurante, 
+        Entregador
+    }
 }

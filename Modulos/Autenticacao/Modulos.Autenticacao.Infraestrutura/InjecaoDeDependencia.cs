@@ -7,14 +7,15 @@ using Modulos.Autenticacao.Infraestrutura.Persistencia;
 using Modulos.Autenticacao.Infraestrutura.Persistencia.Repositorios;
 using Modulos.Autenticacao.Infraestrutura.Servicos;
 
-namespace Modulos.Autenticacao.Infraestrutura;
-
-public static class InjecaoDeDependencia
+namespace Modulos.Autenticacao.Infraestrutura
 {
-    public static void RegistrarAutenticacaoInfraestrutura(this IServiceCollection services, IConfiguration configuration)
+    public static class InjecaoDeDependencia
     {
-        services.AddDbContext<AutenticacaoDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("BasePlataformaEntregas")));
-        services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
-        services.AddScoped<ITokenServico, TokenServico>();
+        public static void RegistrarAutenticacaoInfraestrutura(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddDbContext<AutenticacaoDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("BasePlataformaEntregas")));
+            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<ITokenServico, TokenServico>();
+        }
     }
 }

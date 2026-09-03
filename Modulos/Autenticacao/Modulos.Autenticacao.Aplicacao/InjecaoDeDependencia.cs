@@ -1,14 +1,15 @@
 using Microsoft.Extensions.DependencyInjection;
 using Modulos.Autenticacao.Aplicacao.Servicos;
 
-namespace Modulos.Autenticacao.Aplicacao;
-
-public static class InjecaoDeDependencia
+namespace Modulos.Autenticacao.Aplicacao
 {
-    public static void RegistrarAutenticacaoAplicacao(this IServiceCollection services)
+    public static class InjecaoDeDependencia
     {
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(InjecaoDeDependencia).Assembly));
+        public static void RegistrarAutenticacaoAplicacao(this IServiceCollection services)
+        {
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(InjecaoDeDependencia).Assembly));
 
-        services.AddScoped<ISenhaServico, SenhaServico>();
+            services.AddScoped<ISenhaServico, SenhaServico>();
+        }
     }
 }

@@ -1,9 +1,10 @@
 using Modulos.Autenticacao.Dominio.Entidades;
 
-namespace Modulos.Autenticacao.Aplicacao.Repositorios;
-
-public interface IUsuarioRepositorio
+namespace Modulos.Autenticacao.Aplicacao.Repositorios
 {
-    Task AdicionarAsync(Usuario usuario);
-    Task<Usuario> ObterPorEmailAsync(string email);
+    public interface IUsuarioRepositorio
+    {
+        Task AdicionarAsync(Usuario usuario);
+        Task<Usuario> ObterPorEmailAsync(string email);
+    }
 }
