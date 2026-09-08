@@ -1,22 +1,23 @@
 using Bogus;
 using Modulos.Autenticacao.Dominio.Entidades;
 using Modulos.Autenticacao.Dominio.Enums;
+using System.Globalization;
 
 namespace Modulos.Autenticacao.Dominio.Testes.Entidades
 {
     public class UsuarioTestes
     {
-        private readonly Faker Faker;
+        private readonly Faker _faker;
         public UsuarioTestes()
         {
-            System.Globalization.CultureInfo.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
-            Faker = new Faker("pt_BR");
+            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+            _faker = new Faker("pt_BR");
         }
 
         [Fact]
         public void GerarUsuario_ComDadosValidos_DeveGerarUsuario()
         {
-            var usuario = new Usuario(Faker.Person.Name, Faker.Person.Email, Faker.GetHashCode().ToString(), Faker.PickRandom<Papel>());
+            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>());
 
             Assert.NotNull(usuario);
             Assert.False(usuario.Id == Guid.Empty);
@@ -26,14 +27,14 @@ namespace Modulos.Autenticacao.Dominio.Testes.Entidades
         public void GerarUsuario_SomenteComEmailInvalido_DeveLancarExcecao()
         {
             Assert.Throws<ArgumentException>(() => 
-                new Usuario(Faker.Person.Name, Faker.Person.Name, Faker.GetHashCode().ToString(), Faker.PickRandom<Papel>()
+                new Usuario(_faker.Person.FirstName, _faker.Person.FirstName, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>()
             ));
         }
 
         [Fact]
         public void GerarUsuario_ComEmailValido_DeveGerarUsuario()
         {
-            var usuario = new Usuario(Faker.Person.Name, Faker.Person.Email, Faker.GetHashCode().ToString(), Faker.PickRandom<Papel>());
+            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>());
 
             Assert.NotNull(usuario);
             Assert.True(usuario.Email.Valido);

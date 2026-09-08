@@ -1,8 +1,8 @@
-# 09 — API: autenticação JWT no pipeline e autorização por papel
+# 09 — Validar JWT no pipeline e expor endpoint de usuário autenticado
 
 **Módulo:** Autenticação
 **Camada:** API
-**Status:** todo
+**Status:** feito
 
 ## Contexto
 
