@@ -2,7 +2,7 @@
 
 **Módulo:** Autenticação
 **Camada:** Aplicação
-**Status:** todo
+**Status:** feito
 
 ## Contexto
 

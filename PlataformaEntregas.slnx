@@ -10,5 +10,6 @@
   <Folder Name="/Testes/Autenticacao/">
     <Project Path="Testes/Autenticacao/Modulos.Autenticacao.Aplicacao.Testes/Modulos.Autenticacao.Aplicacao.Testes.csproj" />
     <Project Path="Testes/Autenticacao/Modulos.Autenticacao.Dominio.Testes/Modulos.Autenticacao.Dominio.Testes.csproj" />
+    <Project Path="Testes/Autenticacao/Modulos.Autenticacao.Infraestrutura.Testes/Modulos.Autenticacao.Infraestrutura.Testes.csproj" Id="15798470-230b-4373-b6df-6d4beda7ea19" />
   </Folder>
 </Solution>
