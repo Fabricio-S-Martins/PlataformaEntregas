@@ -1,4 +1,4 @@
-using Modulos.Autenticacao.Dominio.Compartilhado;
+using Compartilhado.Dominio;
 using Modulos.Autenticacao.Dominio.Enums;
 using Modulos.Autenticacao.Dominio.VOs;
 

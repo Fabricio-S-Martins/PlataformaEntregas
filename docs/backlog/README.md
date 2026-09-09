@@ -4,6 +4,12 @@
 
 Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 
+## Compartilhado
+
+| Task | Status |
+|---|---|
+| [01 - Extrair Resultado\<T\> para um Shared Kernel entre módulos](compartilhado/01-shared-kernel-resultado.md) | feito |
+
 ## Módulo Autenticação
 
 | Task | Status |
@@ -21,11 +27,13 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [11 - Cobrir geração e validação do token JWT com testes automatizados](autenticacao/11-testes-token-servico.md) | feito |
 | [12 - Adotar Result Pattern nas invariantes do Usuario](autenticacao/12-result-pattern-usuario.md) | feito |
 | [XX - Infraestrutura: fábrica de design-time e primeira Migration](autenticacao/XX-migration-inicial.md) | resolvida (task 07) |
-| [XX - Infraestrutura: avaliar Persistence Model separado do Domínio](autenticacao/XX-persistence-model.md) | backlog (a detalhar) |
+| [XX - Infraestrutura: avaliar Persistence Model separado do Domínio](autenticacao/XX-persistence-model.md) | adiada (revisitar em Pedidos) |
 
 ## Módulo Catálogo
 
-_ainda não iniciado_
+| Task | Status |
+|---|---|
+| [01 - Modelar a entidade Restaurante no Domínio](catalogo/01-dominio-restaurante.md) | feito |
 
 ## Módulo Pedidos
 

@@ -1,4 +1,4 @@
-﻿namespace Modulos.Autenticacao.Dominio.Compartilhado
+﻿namespace Compartilhado.Dominio
 {
     public class Resultado<T>
     {

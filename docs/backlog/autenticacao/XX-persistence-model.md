@@ -2,7 +2,7 @@
 
 **Módulo:** Autenticação
 **Camada:** Infraestrutura / Domínio
-**Status:** backlog (não detalhada ainda — número/ordem definidos quando entrar na fila)
+**Status:** adiada — revisitar quando um módulo com agregados mais complexos (ex: Pedidos) sentir essa dor de forma concreta
 
 ## Contexto
 

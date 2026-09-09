@@ -1,10 +1,17 @@
 <Solution>
+  <Folder Name="/Compartilhado/" />
+  <Folder Name="/Compartilhado/Compartilhado.Dominio/">
+    <Project Path="Compartilhado/Compartilhado.Dominio/Compartilhado.Dominio.csproj" />
+  </Folder>
   <Folder Name="/Modulos/" />
   <Folder Name="/Modulos/Autenticacao/">
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Api/Modulos.Autenticacao.Api.csproj" />
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Aplicacao/Modulos.Autenticacao.Aplicacao.csproj" />
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Dominio/Modulos.Autenticacao.Dominio.csproj" />
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Infraestrutura/Modulos.Autenticacao.Infraestrutura.csproj" />
+  </Folder>
+  <Folder Name="/Modulos/Catalogo/">
+    <Project Path="Modulos/Catalogo/Modulos.Catalogo.Dominio/Modulos.Catalogo.Dominio.csproj" />
   </Folder>
   <Folder Name="/Testes/" />
   <Folder Name="/Testes/Autenticacao/">
