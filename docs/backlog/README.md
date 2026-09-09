@@ -34,6 +34,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | Task | Status |
 |---|---|
 | [01 - Modelar a entidade Restaurante no Domínio](catalogo/01-dominio-restaurante.md) | feito |
+| [02 - Modelar Cardapio e ItemCardapio no Domínio](catalogo/02-dominio-cardapio-item.md) | feito |
 
 ## Módulo Pedidos
 
