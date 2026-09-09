@@ -18,7 +18,7 @@ namespace Modulos.Autenticacao.Aplicacao.Testes.Servicos
         }
 
         [Fact]
-        public void GerarHash_PassandoMesmaSenha_DeveGerarHashDiferentes()
+        public void GerarHash_ComMesmaSenha_DeveGerarHashDiferentes()
         {
             var senha = _faker.Internet.Password();
 
@@ -29,7 +29,7 @@ namespace Modulos.Autenticacao.Aplicacao.Testes.Servicos
         }
 
         [Fact]
-        public void VerificarHash_PassandoMesmaSenha_DeveRetornarVerdadeiro()
+        public void VerificarHash_ComMesmaSenha_DeveRetornarVerdadeiro()
         {
             var senha = _faker.Internet.Password();
             var senhaHash = _senhaServico.GerarHash(senha);
@@ -38,7 +38,7 @@ namespace Modulos.Autenticacao.Aplicacao.Testes.Servicos
         }
 
         [Fact]
-        public void VerificarHash_PassandoSenhasDistintas_DeveRetornarFalso()
+        public void VerificarHash_ComSenhasDistintas_DeveRetornarFalso()
         {
             var senha = _faker.Internet.Password();
             var senhaHash = _senhaServico.GerarHash(_faker.Internet.Password());

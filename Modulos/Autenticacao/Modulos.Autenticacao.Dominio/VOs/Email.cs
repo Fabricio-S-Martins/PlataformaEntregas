@@ -11,7 +11,7 @@ namespace Modulos.Autenticacao.Dominio.VOs
         public Email(string valor)
         {
             Valido = !string.IsNullOrWhiteSpace(valor) && Regex.IsMatch(valor);
-            Valor = valor.Trim().ToLowerInvariant();
+            Valor = valor?.Trim().ToLowerInvariant();
         }
     }
 }

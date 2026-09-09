@@ -1,3 +1,4 @@
+using Modulos.Autenticacao.Dominio.Compartilhado;
 using Modulos.Autenticacao.Dominio.Enums;
 using Modulos.Autenticacao.Dominio.VOs;
 
@@ -6,22 +7,39 @@ namespace Modulos.Autenticacao.Dominio.Entidades
     public class Usuario
     {
         private Usuario(){}
-        public Usuario(string nome, string email, string senhaHash, Papel papel)
+
+        private Usuario(string nome, Email email, string senhaHash, Papel papel)
         {
             Id = Guid.NewGuid();
             Nome = nome;
-            Email = new Email(email);
-            if(!Email.Valido)
-                throw new ArgumentException("E-mail inválido.", nameof(email));
-
+            Email = email;
             SenhaHash = senhaHash;
             Papel = papel;
         }
 
-        public Guid Id { get; set; }
-        public string Nome { get; set; }
-        public Email Email { get; set; }
-        public string SenhaHash { get; set; }
-        public Papel Papel  { get; set; }
+        public Guid Id { get; }
+        public string Nome { get; }
+        public Email Email { get; }
+        public string SenhaHash { get; }
+        public Papel Papel { get; }
+
+        public static Resultado<Usuario> Criar(string nome, string email, string senhaHash, Papel papel)
+        {
+            var erros = new List<string>();
+            if (string.IsNullOrWhiteSpace(nome))
+                erros.Add("Nome inválido.");
+
+            var emailVO = new Email(email);
+            if (!emailVO.Valido)
+                erros.Add("E-mail inválido.");
+
+            if (string.IsNullOrWhiteSpace(senhaHash))
+                erros.Add("Senha inválida.");
+
+            if(erros.Count > 0)
+                return Resultado<Usuario>.ComFalha(erros);
+
+            return Resultado<Usuario>.ComSucesso(new Usuario(nome, emailVO, senhaHash, papel));
+        }
     }
 }

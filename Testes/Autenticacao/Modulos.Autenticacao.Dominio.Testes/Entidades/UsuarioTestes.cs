@@ -15,29 +15,28 @@ namespace Modulos.Autenticacao.Dominio.Testes.Entidades
         }
 
         [Fact]
-        public void GerarUsuario_ComDadosValidos_DeveGerarUsuario()
+        public void GerarUsuario_ComDadosValidos_DeveRetornarResultadoSucesso()
         {
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>());
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>());
 
-            Assert.NotNull(usuario);
-            Assert.False(usuario.Id == Guid.Empty);
-        } 
-
-        [Fact]
-        public void GerarUsuario_SomenteComEmailInvalido_DeveLancarExcecao()
-        {
-            Assert.Throws<ArgumentException>(() => 
-                new Usuario(_faker.Person.FirstName, _faker.Person.FirstName, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>()
-            ));
+            Assert.True(resultadoUsuario.Sucesso);
         }
 
         [Fact]
         public void GerarUsuario_ComEmailValido_DeveGerarUsuario()
         {
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>());
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>());
 
-            Assert.NotNull(usuario);
-            Assert.True(usuario.Email.Valido);
-        } 
+            Assert.NotNull(resultadoUsuario.Valor);
+            Assert.True(resultadoUsuario.Valor.Email.Valido);
+        }
+
+        [Fact]
+        public void GerarUsuario_ComEmailInvalido_DeveRetornarResultadoFalha()
+        {
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.FirstName, _faker.GetHashCode().ToString(), _faker.PickRandom<Papel>());
+
+            Assert.False(resultadoUsuario.Sucesso);
+        }
     }
 }

@@ -20,9 +20,11 @@ namespace Modulos.Autenticacao.Aplicacao.CasosDeUso.CriarUsuario
         public async Task Handle(CriarUsuarioCommand request, CancellationToken cancellationToken)
         {
             var senhaHash = _senhaServico.GerarHash(request.Senha);
-            var usuario = new Usuario(request.Nome, request.Email, senhaHash, Enum.Parse<Papel>(request.Papel));
+            var resultadoUsuario = Usuario.Criar(request.Nome, request.Email, senhaHash, Enum.Parse<Papel>(request.Papel));
+            if (!resultadoUsuario.Sucesso)
+                throw new ArgumentException(string.Join(Environment.NewLine, resultadoUsuario.Erros));
 
-            await _usuarioRepositorio.AdicionarAsync(usuario);
+            await _usuarioRepositorio.AdicionarAsync(resultadoUsuario.Valor);
         }
     }
 }

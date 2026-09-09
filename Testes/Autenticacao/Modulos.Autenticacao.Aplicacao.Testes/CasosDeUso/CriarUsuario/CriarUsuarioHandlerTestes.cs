@@ -22,10 +22,11 @@ namespace Modulos.Autenticacao.Aplicacao.Testes.CasosDeUso.CriarUsuario
 
             _usuarioRepositorioMock = new Mock<IUsuarioRepositorio>();
             _servicoSenhaMock = new Mock<ISenhaServico>();
+            _servicoSenhaMock.Setup(s => s.GerarHash(It.IsAny<string>())).Returns(_faker.Random.Hash());
         }
 
         [Fact]
-        public async Task Handle_PassandoDadosValidos_DevePassarPeloAdicionarDoRepositorio()
+        public async Task Handle_ComDadosValidos_DevePassarPeloAdicionarDoRepositorio()
         {
             var handler = new CriarUsuarioHandler(_usuarioRepositorioMock.Object, _servicoSenhaMock.Object);
             var command = new CriarUsuarioCommand(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>().ToString());
@@ -36,7 +37,7 @@ namespace Modulos.Autenticacao.Aplicacao.Testes.CasosDeUso.CriarUsuario
         }
 
         [Fact]
-        public async Task Handle_PassandoDadosValidos_DeveHashearSenha()
+        public async Task Handle_ComDadosValidos_DeveHashearSenha()
         {
             var handler = new CriarUsuarioHandler(_usuarioRepositorioMock.Object, _servicoSenhaMock.Object);
             var command = new CriarUsuarioCommand(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>().ToString());

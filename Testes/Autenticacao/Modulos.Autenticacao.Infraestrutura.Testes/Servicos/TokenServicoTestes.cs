@@ -37,42 +37,42 @@ namespace Modulos.Autenticacao.Infraestrutura.Testes.Servicos
         }
 
         [Fact]
-        public void GerarToken_PassandoUsuarioValido_DeveRetornarTokenComTresSegmentos()
+        public void GerarToken_ComUsuarioValido_DeveRetornarTokenComTresSegmentos()
         {
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
 
-            var token = _tokenServico.GerarToken(usuario);
+            var token = _tokenServico.GerarToken(resultadoUsuario.Valor);
 
             Assert.Equal(2, token.Count(t => t == '.'));
         }
 
         [Fact]
-        public void GerarToken_PassandoUsuarioValido_DeveIncluirIdDoUsuarioNoToken()
+        public void GerarToken_ComUsuarioValido_DeveIncluirIdDoUsuarioNoToken()
         {
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
 
-            var token = _tokenServico.GerarToken(usuario);
+            var token = _tokenServico.GerarToken(resultadoUsuario.Valor);
             var tokenDeSeguranca = new JwtSecurityTokenHandler().ReadJwtToken(token);
 
-            Assert.Equal(tokenDeSeguranca.Subject, usuario.Id.ToString());
+            Assert.Equal(tokenDeSeguranca.Subject, resultadoUsuario.Valor.Id.ToString());
         }
 
         [Fact]
-        public void GerarToken_PassandoUsuarioValido_DeveIncluirPapelDoUsuarioNoToken()
+        public void GerarToken_ComUsuarioValido_DeveIncluirPapelDoUsuarioNoToken()
         {
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
 
-            var token = _tokenServico.GerarToken(usuario);
+            var token = _tokenServico.GerarToken(resultadoUsuario.Valor);
             var tokenDeSeguranca = new JwtSecurityTokenHandler().ReadJwtToken(token);
 
-            Assert.Contains(tokenDeSeguranca.Claims, c => c.Value == usuario.Papel.ToString());
+            Assert.Contains(tokenDeSeguranca.Claims, c => c.Value == resultadoUsuario.Valor.Papel.ToString());
         }
 
         [Fact]
-        public void GerarToken_PassandoUsuarioValido_DeveSerValidadoComSucesso()
+        public void GerarToken_ComUsuarioValido_DeveSerValidadoComSucesso()
         {
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
-            var token = _tokenServico.GerarToken(usuario);
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
+            var token = _tokenServico.GerarToken(resultadoUsuario.Valor);
             var tokenHandler = new JwtSecurityTokenHandler();
             var validationParameters = new TokenValidationParameters
             {
@@ -87,12 +87,12 @@ namespace Modulos.Autenticacao.Infraestrutura.Testes.Servicos
         }
 
         [Fact]
-        public void GerarToken_PassandoUsuarioValido_DeveExpirarConformeConfiguracao()
+        public void GerarToken_ComUsuarioValido_DeveExpirarConformeConfiguracao()
         {
             var dataCriacao = DateTime.UtcNow;
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
 
-            var token = _tokenServico.GerarToken(usuario);
+            var token = _tokenServico.GerarToken(resultadoUsuario.Valor);
             var tokenDeSeguranca = new JwtSecurityTokenHandler().ReadJwtToken(token);
 
             var expiracaoEsperada = dataCriacao.AddMinutes(5);

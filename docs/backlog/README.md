@@ -19,7 +19,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [09 - Validar JWT no pipeline e expor endpoint de usuário autenticado](autenticacao/09-autorizacao-papel.md) | feito |
 | [10 - Cobrir login e hash de senha com testes automatizados](autenticacao/10-testes-login-senha-servico.md) | feito |
 | [11 - Cobrir geração e validação do token JWT com testes automatizados](autenticacao/11-testes-token-servico.md) | feito |
-| [XX - Domínio: reforçar validação de invariantes do Usuario](autenticacao/XX-validacoes-usuario.md) | backlog (a detalhar) |
+| [12 - Adotar Result Pattern nas invariantes do Usuario](autenticacao/12-result-pattern-usuario.md) | feito |
 | [XX - Infraestrutura: fábrica de design-time e primeira Migration](autenticacao/XX-migration-inicial.md) | resolvida (task 07) |
 | [XX - Infraestrutura: avaliar Persistence Model separado do Domínio](autenticacao/XX-persistence-model.md) | backlog (a detalhar) |
 

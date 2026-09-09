@@ -27,15 +27,15 @@ namespace Modulos.Autenticacao.Aplicacao.Testes.CasosDeUso.Login
         }
 
         [Fact]
-        public async Task Handle_PassandoDadosValidos_DeveRetornarToken()
+        public async Task Handle_ComDadosValidos_DeveRetornarToken()
         {
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
             var senhaDigitada = _faker.Internet.Password();
-            var comand = new LoginCommand(usuario.Email.Valor, senhaDigitada);
+            var comand = new LoginCommand(resultadoUsuario.Valor.Email.Valor, senhaDigitada);
             var handler = new LoginHandler(_usuarioRepositorioMock.Object, _senhaServicoMock.Object, _tokenServicoMock.Object);
 
             var tokenEsperado = Guid.NewGuid().ToString();
-            _usuarioRepositorioMock.Setup(r => r.ObterPorEmailAsync(It.IsAny<string>())).ReturnsAsync(usuario);
+            _usuarioRepositorioMock.Setup(r => r.ObterPorEmailAsync(It.IsAny<string>())).ReturnsAsync(resultadoUsuario.Valor);
             _senhaServicoMock.Setup(s => s.VerificarHash(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
             _tokenServicoMock.Setup(t => t.GerarToken(It.IsAny<Usuario>())).Returns(tokenEsperado);
 
@@ -45,7 +45,7 @@ namespace Modulos.Autenticacao.Aplicacao.Testes.CasosDeUso.Login
         }
 
         [Fact]
-        public async Task Handle_PassandoEmailInexistente_DeveLancarExcecao()
+        public async Task Handle_ComEmailInexistente_DeveLancarExcecao()
         {
             var comand = new LoginCommand(_faker.Person.Email, _faker.Internet.Password());
             var handler = new LoginHandler(_usuarioRepositorioMock.Object, _senhaServicoMock.Object, _tokenServicoMock.Object);
@@ -58,14 +58,14 @@ namespace Modulos.Autenticacao.Aplicacao.Testes.CasosDeUso.Login
         }
 
         [Fact]
-        public async Task Handle_PassandoSenhaIncorreta_DeveLancarExcecao()
+        public async Task Handle_ComSenhaIncorreta_DeveLancarExcecao()
         {
-            var usuario = new Usuario(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
+            var resultadoUsuario = Usuario.Criar(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>());
             var senhaDigitada = _faker.Internet.Password();
-            var comand = new LoginCommand(usuario.Email.Valor, senhaDigitada);
+            var comand = new LoginCommand(resultadoUsuario.Valor.Email.Valor, senhaDigitada);
             var handler = new LoginHandler(_usuarioRepositorioMock.Object, _senhaServicoMock.Object, _tokenServicoMock.Object);
 
-            _usuarioRepositorioMock.Setup(r => r.ObterPorEmailAsync(It.IsAny<string>())).ReturnsAsync(usuario);
+            _usuarioRepositorioMock.Setup(r => r.ObterPorEmailAsync(It.IsAny<string>())).ReturnsAsync(resultadoUsuario.Valor);
             _senhaServicoMock.Setup(s => s.VerificarHash(It.IsAny<string>(), It.IsAny<string>())).Returns(false);
 
             await Assert.ThrowsAsync<ArgumentException>(() => handler.Handle(comand, CancellationToken.None));
