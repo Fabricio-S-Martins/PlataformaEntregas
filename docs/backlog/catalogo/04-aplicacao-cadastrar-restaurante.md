@@ -2,7 +2,7 @@
 
 **Módulo:** Catálogo
 **Camada:** Aplicação
-**Status:** todo
+**Status:** feito
 
 ## Contexto
 

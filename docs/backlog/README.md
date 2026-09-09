@@ -36,7 +36,8 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [01 - Modelar a entidade Restaurante no Domínio](catalogo/01-dominio-restaurante.md) | feito |
 | [02 - Modelar Cardapio e ItemCardapio no Domínio](catalogo/02-dominio-cardapio-item.md) | feito |
 | [03 - Cobrir Restaurante, Cardapio e ItemCardapio com testes automatizados](catalogo/03-testes-restaurante-cardapio-item.md) | feito |
-| [04 - Criar caso de uso de cadastro de Restaurante](catalogo/04-aplicacao-cadastrar-restaurante.md) | todo |
+| [04 - Criar caso de uso de cadastro de Restaurante](catalogo/04-aplicacao-cadastrar-restaurante.md) | feito |
+| [05 - Cobrir caso de uso de cadastro de Restaurante com testes automatizados](catalogo/05-testes-cadastrar-restaurante.md) | feito |
 
 ## Módulo Pedidos
 

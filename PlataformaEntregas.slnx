@@ -21,6 +21,7 @@
     <Project Path="Testes/Autenticacao/Modulos.Autenticacao.Infraestrutura.Testes/Modulos.Autenticacao.Infraestrutura.Testes.csproj" Id="15798470-230b-4373-b6df-6d4beda7ea19" />
   </Folder>
   <Folder Name="/Testes/Catalogo/">
+    <Project Path="Testes/Catalogo/Modulos.Catalogo.Aplicacao.Testes/Modulos.Catalogo.Aplicacao.Testes.csproj" />
     <Project Path="Testes/Catalogo/Modulos.Catalogo.Dominio.Testes/Modulos.Catalogo.Dominio.Testes.csproj" />
   </Folder>
 </Solution>
