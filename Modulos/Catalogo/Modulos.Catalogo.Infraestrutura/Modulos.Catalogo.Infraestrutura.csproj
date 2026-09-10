@@ -12,12 +12,11 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.22.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Modulos.Autenticacao.Aplicacao\Modulos.Autenticacao.Aplicacao.csproj" />
-    <ProjectReference Include="..\Modulos.Autenticacao.Dominio\Modulos.Autenticacao.Dominio.csproj" />
+    <ProjectReference Include="..\Modulos.Catalogo.Aplicacao\Modulos.Catalogo.Aplicacao.csproj" />
+    <ProjectReference Include="..\Modulos.Catalogo.Dominio\Modulos.Catalogo.Dominio.csproj" />
   </ItemGroup>
-	
+
 </Project>

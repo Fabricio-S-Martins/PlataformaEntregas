@@ -38,6 +38,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [03 - Cobrir Restaurante, Cardapio e ItemCardapio com testes automatizados](catalogo/03-testes-restaurante-cardapio-item.md) | feito |
 | [04 - Criar caso de uso de cadastro de Restaurante](catalogo/04-aplicacao-cadastrar-restaurante.md) | feito |
 | [05 - Cobrir caso de uso de cadastro de Restaurante com testes automatizados](catalogo/05-testes-cadastrar-restaurante.md) | feito |
+| [06 - Implementar IRestauranteRepositorio com EF Core](catalogo/06-infraestrutura-restaurante-repositorio.md) | feito |
 
 ## Módulo Pedidos
 

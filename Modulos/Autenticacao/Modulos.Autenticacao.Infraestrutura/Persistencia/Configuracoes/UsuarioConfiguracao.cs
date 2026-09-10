@@ -4,7 +4,7 @@ using Modulos.Autenticacao.Dominio.Entidades;
 
 namespace Modulos.Autenticacao.Infraestrutura.Persistencia.Configuracoes
 {
-    public class UsuarioConfiguracao : IEntityTypeConfiguration<Usuario>
+    internal class UsuarioConfiguracao : IEntityTypeConfiguration<Usuario>
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {

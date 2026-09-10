@@ -6,7 +6,7 @@ namespace Modulos.Autenticacao.Infraestrutura.Persistencia.Repositorios
 {
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
-        private AutenticacaoDbContext _context;
+        private readonly AutenticacaoDbContext _context;
         public UsuarioRepositorio(AutenticacaoDbContext context)
         {
             _context = context;
