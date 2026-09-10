@@ -9,7 +9,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | Task | Status |
 |---|---|
 | [01 - Extrair Resultado\<T\> para um Shared Kernel entre módulos](compartilhado/01-shared-kernel-resultado.md) | feito |
-| [02 - Criar host único da API e converter Modulos.Autenticacao.Api em biblioteca](compartilhado/02-host-unico-api.md) | todo |
+| [02 - Criar host único da API e converter Modulos.Autenticacao.Api em biblioteca](compartilhado/02-host-unico-api.md) | feito |
 
 ## Módulo Autenticação
 
@@ -40,6 +40,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [04 - Criar caso de uso de cadastro de Restaurante](catalogo/04-aplicacao-cadastrar-restaurante.md) | feito |
 | [05 - Cobrir caso de uso de cadastro de Restaurante com testes automatizados](catalogo/05-testes-cadastrar-restaurante.md) | feito |
 | [06 - Implementar IRestauranteRepositorio com EF Core](catalogo/06-infraestrutura-restaurante-repositorio.md) | feito |
+| [07 - Expor endpoint de cadastro de Restaurante e gerar a Migration inicial do Catálogo](catalogo/07-api-cadastrar-restaurante.md) | feito |
 
 ## Módulo Pedidos
 

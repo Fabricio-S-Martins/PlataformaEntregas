@@ -14,6 +14,7 @@
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Infraestrutura/Modulos.Autenticacao.Infraestrutura.csproj" />
   </Folder>
   <Folder Name="/Modulos/Catalogo/">
+    <Project Path="Modulos/Catalogo/Modulos.Catalogo.Api/Modulos.Catalogo.Api.csproj" Id="ee46e38b-eddb-4792-9ee9-06e17dc0763c" />
     <Project Path="Modulos/Catalogo/Modulos.Catalogo.Aplicacao/Modulos.Catalogo.Aplicacao.csproj" Id="193d5c3b-df46-4211-a710-9f4c376bd28d" />
     <Project Path="Modulos/Catalogo/Modulos.Catalogo.Dominio/Modulos.Catalogo.Dominio.csproj" />
     <Project Path="Modulos/Catalogo/Modulos.Catalogo.Infraestrutura/Modulos.Catalogo.Infraestrutura.csproj" Id="b63c3355-2bcc-4361-800b-be48cf764891" />

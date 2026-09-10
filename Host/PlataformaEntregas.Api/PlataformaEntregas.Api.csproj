@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Modulos\Autenticacao\Modulos.Autenticacao.Api\Modulos.Autenticacao.Api.csproj" />
+    <ProjectReference Include="..\..\Modulos\Catalogo\Modulos.Catalogo.Api\Modulos.Catalogo.Api.csproj" />
   </ItemGroup>
 
 </Project>

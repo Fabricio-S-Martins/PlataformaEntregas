@@ -2,13 +2,13 @@
 
 **Módulo:** Compartilhado / Autenticação
 **Camada:** API
-**Status:** todo
+**Status:** feito
 
 ## Contexto
 
 Hoje o `Modulos.Autenticacao.Api` acumula dois papéis: é o **host** da aplicação (tem `Program.cs`, abre a porta, roda o processo) e ao mesmo tempo é dono dos endpoints de Autenticação. Num monolito modular, o certo é separar: um host único que compõe todos os módulos, e cada módulo com sua biblioteca de API (só endpoints + registro), sem `Program.cs` próprio.
 
-Sem essa separação, adicionar o Catálogo (Catálogo 08) obrigaria a escolher entre pôr endpoints de Catálogo dentro do projeto de Autenticação (acoplamento errado) ou criar um segundo host (viraria quase-microserviço, contra o que o CLAUDE.md define).
+Sem essa separação, adicionar o Catálogo (Catálogo 07) obrigaria a escolher entre pôr endpoints de Catálogo dentro do projeto de Autenticação (acoplamento errado) ou criar um segundo host (viraria quase-microserviço, contra o que o CLAUDE.md define).
 
 ## Conceito: Composition Root
 
@@ -61,7 +61,7 @@ Sem testes automatizados — é refactor de estrutura, sem mudança de comportam
 ## Notas / decisões tomadas
 
 - Host único, não um host por módulo — mantém o monolito modular do CLAUDE.md; extrair um módulo como serviço separado continua sendo épico futuro.
-- `Microsoft.EntityFrameworkCore.Design` vai pro host porque o design-time do EF Core roda contra o startup project — é isso que destrava a Migration inicial do Catálogo (Catálogo 08).
+- `Microsoft.EntityFrameworkCore.Design` vai pro host porque o design-time do EF Core roda contra o startup project — é isso que destrava a Migration inicial do Catálogo (Catálogo 07).
 - A `AddSecurityDefinition`/`AddSecurityRequirement` de Bearer no Swagger fica no host — é configuração da documentação da API inteira, não de um módulo.
 - `Modulos.Autenticacao.Api` continua sendo o nome da biblioteca de API do módulo; o `.Api` agora significa "camada de API do módulo", não "host".
 - O `.csproj` do host segue o padrão do resto da solution: `ImplicitUsings` habilitado, `Nullable` desabilitado (o `Modulos.Autenticacao.Api` atual usa o contrário disso, e não vale arrastar essa divergência pro projeto novo).

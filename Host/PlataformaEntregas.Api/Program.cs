@@ -1,9 +1,11 @@
 using Microsoft.OpenApi;
 using Modulos.Autenticacao.Api;
+using Modulos.Catalogo.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.RegistrarAutenticacaoApi(builder.Configuration);
+builder.Services.RegistrarCatalogoApi(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options =>
@@ -28,6 +30,7 @@ app.UseAuthorization();
 
 var api = app.MapGroup("/api");
 api.MapAutenticacaoEndpoints();
+api.MapCatalogoEndpoints();
 
 if (app.Environment.IsDevelopment())
 {

@@ -17,6 +17,8 @@ namespace Modulos.Catalogo.Infraestrutura.Persistencia.Configuracoes
             builder.Property(r => r.Cnpj)
                    .HasMaxLength(14)
                    .IsRequired();
+
+            builder.Property(r => r.Ativo);
         }
     }
 }
