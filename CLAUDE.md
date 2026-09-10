@@ -43,4 +43,10 @@ Todo o projeto — código de domínio (nomes de entidades/conceitos de negócio
 
 ## Estado atual
 
-Projeto recém-criado, ainda sem código. Próximo passo: backlog inicial do módulo Auth.
+Módulo Autenticação com Domínio, Aplicação, Infraestrutura e API completos (cadastro, login JWT, endpoint de usuário autenticado). Módulo Catálogo com Domínio (`Restaurante`, `Cardapio`, `ItemCardapio`), Aplicação (cadastro de Restaurante) e Infraestrutura (`IRestauranteRepositorio` com EF Core).
+
+`Resultado<T>` (Result Pattern) extraído para o Shared Kernel `Compartilhado.Dominio`, compartilhado entre módulos.
+
+O host da aplicação é o `PlataformaEntregas.Api` (em `Host/`): um host único que compõe todos os módulos (Composition Root). Cada módulo expõe uma biblioteca `Modulos.<Modulo>.Api` com os endpoints e o registro de DI/endpoints; nenhum módulo tem `Program.cs` próprio.
+
+Backlog e progresso detalhado em `docs/backlog/`.

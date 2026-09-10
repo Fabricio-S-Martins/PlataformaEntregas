@@ -3,6 +3,9 @@
   <Folder Name="/Compartilhado/Compartilhado.Dominio/">
     <Project Path="Compartilhado/Compartilhado.Dominio/Compartilhado.Dominio.csproj" />
   </Folder>
+  <Folder Name="/Host/">
+    <Project Path="Host/PlataformaEntregas.Api/PlataformaEntregas.Api.csproj" />
+  </Folder>
   <Folder Name="/Modulos/" />
   <Folder Name="/Modulos/Autenticacao/">
     <Project Path="Modulos/Autenticacao/Modulos.Autenticacao.Api/Modulos.Autenticacao.Api.csproj" />

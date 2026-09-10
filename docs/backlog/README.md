@@ -9,6 +9,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | Task | Status |
 |---|---|
 | [01 - Extrair Resultado\<T\> para um Shared Kernel entre módulos](compartilhado/01-shared-kernel-resultado.md) | feito |
+| [02 - Criar host único da API e converter Modulos.Autenticacao.Api em biblioteca](compartilhado/02-host-unico-api.md) | todo |
 
 ## Módulo Autenticação
 
