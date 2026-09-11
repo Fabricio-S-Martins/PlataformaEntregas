@@ -17,5 +17,10 @@ namespace Modulos.Catalogo.Infraestrutura.Persistencia.Repositorios
             await _catalogoDbContext.AddAsync(restaurante);
             await _catalogoDbContext.SaveChangesAsync();
         }
+
+        public async Task<Restaurante> ObterPorIdAsync(Guid id)
+        {
+            return await _catalogoDbContext.FindAsync<Restaurante>(id);
+        }
     }
 }

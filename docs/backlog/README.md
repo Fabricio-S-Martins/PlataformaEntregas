@@ -41,6 +41,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [05 - Cobrir caso de uso de cadastro de Restaurante com testes automatizados](catalogo/05-testes-cadastrar-restaurante.md) | feito |
 | [06 - Implementar IRestauranteRepositorio com EF Core](catalogo/06-infraestrutura-restaurante-repositorio.md) | feito |
 | [07 - Expor endpoint de cadastro de Restaurante e gerar a Migration inicial do Catálogo](catalogo/07-api-cadastrar-restaurante.md) | feito |
+| [08 - Cache de leitura do Restaurante com Redis (cache-aside + write-through)](catalogo/08-cache-leitura-redis.md) | feito |
 
 ## Módulo Pedidos
 

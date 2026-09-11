@@ -1,5 +1,6 @@
 using Bogus;
 using Bogus.Extensions.Brazil;
+using Microsoft.Extensions.Caching.Distributed;
 using Modulos.Catalogo.Aplicacao.CasosDeUso.CadastrarRestaurante;
 using Modulos.Catalogo.Aplicacao.Repositorios;
 using Modulos.Catalogo.Dominio.Entidades;
@@ -12,6 +13,7 @@ namespace Modulos.Catalogo.Aplicacao.Testes.CasosDeUso.CadastrarRestaurante
     {
         private readonly Faker _faker;
         private readonly Mock<IRestauranteRepositorio> _restauranteRepositorioMock;
+        private readonly Mock<IDistributedCache> _distributedCacheMock;
 
         public CadastrarRestauranteHandlerTestes()
         {
@@ -19,12 +21,13 @@ namespace Modulos.Catalogo.Aplicacao.Testes.CasosDeUso.CadastrarRestaurante
             _faker = new Faker("pt_BR");
 
             _restauranteRepositorioMock = new Mock<IRestauranteRepositorio>();
+            _distributedCacheMock = new Mock<IDistributedCache>();
         }
 
         [Fact]
         public async Task Handle_ComDadosValidos_DevePassarPeloAdicionarDoRepositorio()
         {
-            var handler = new CadastrarRestauranteHandler(_restauranteRepositorioMock.Object);
+            var handler = new CadastrarRestauranteHandler(_distributedCacheMock.Object, _restauranteRepositorioMock.Object);
             var command = new CadastrarRestauranteCommand(_faker.Company.CompanyName(), _faker.Company.Cnpj(false));
 
             await handler.Handle(command, CancellationToken.None);
@@ -35,7 +38,7 @@ namespace Modulos.Catalogo.Aplicacao.Testes.CasosDeUso.CadastrarRestaurante
         [Fact]
         public async Task Handle_ComDadosInvalidos_DeveLancarExcecaoSemChamarOAdicionarDoRepositorio()
         {
-            var handler = new CadastrarRestauranteHandler(_restauranteRepositorioMock.Object);
+            var handler = new CadastrarRestauranteHandler(_distributedCacheMock.Object, _restauranteRepositorioMock.Object);
             var command = new CadastrarRestauranteCommand(string.Empty, string.Empty);
 
             await Assert.ThrowsAsync<ArgumentException>(() => handler.Handle(command, CancellationToken.None));
