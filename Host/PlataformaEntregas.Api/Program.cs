@@ -1,11 +1,13 @@
 using Microsoft.OpenApi;
 using Modulos.Autenticacao.Api;
 using Modulos.Catalogo.Api;
+using Modulos.Pedidos.Infraestrutura;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.RegistrarAutenticacaoApi(builder.Configuration);
 builder.Services.RegistrarCatalogoApi(builder.Configuration);
+builder.Services.RegistrarPedidosInfraestrutura(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options =>

@@ -22,6 +22,7 @@
   <Folder Name="/Modulos/Pedidos/">
     <Project Path="Modulos/Pedidos/Modulos.Pedidos.Aplicacao/Modulos.Pedidos.Aplicacao.csproj" Id="aba258ec-e079-4e8c-a8bf-6bc22e19bcc5" />
     <Project Path="Modulos/Pedidos/Modulos.Pedidos.Dominio/Modulos.Pedidos.Dominio.csproj" Id="92225895-2e88-4945-a08e-32384f96885b" />
+    <Project Path="Modulos/Pedidos/Modulos.Pedidos.Infraestrutura/Modulos.Pedidos.Infraestrutura.csproj" />
   </Folder>
   <Folder Name="/Testes/" />
   <Folder Name="/Testes/Autenticacao/">
