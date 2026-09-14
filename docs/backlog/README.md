@@ -50,6 +50,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [01 - Modelar o agregado Pedido com máquina de estados e eventos de domínio](pedidos/01-dominio-pedido-maquina-estados.md) | feito |
 | [02 - Cobrir Pedido e ItemPedido com testes automatizados](pedidos/02-testes-pedido-item-pedido.md) | feito |
 | [03 - Criar casos de uso do Pedido e publicar os eventos de domínio](pedidos/03-aplicacao-pedido.md) | feito |
+| [04 - Cobrir os casos de uso do Pedido com testes automatizados](pedidos/04-testes-aplicacao-pedido.md) | feito |
 
 ## Módulo Pagamentos
 

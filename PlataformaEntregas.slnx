@@ -34,6 +34,7 @@
     <Project Path="Testes/Catalogo/Modulos.Catalogo.Dominio.Testes/Modulos.Catalogo.Dominio.Testes.csproj" />
   </Folder>
   <Folder Name="/Testes/Pedidos/">
+    <Project Path="Testes/Pedidos/Modulos.Pedidos.Aplicacao.Testes/Modulos.Pedidos.Aplicacao.Testes.csproj" />
     <Project Path="Testes/Pedidos/Modulos.Pedidos.Dominio.Testes/Modulos.Pedidos.Dominio.Testes.csproj" Id="ca26fd45-d796-4b45-bd7c-1125a0025612" />
   </Folder>
 </Solution>
