@@ -43,7 +43,7 @@ Todo o projeto — código de domínio (nomes de entidades/conceitos de negócio
 
 ## Estado atual
 
-Módulo Autenticação com Domínio, Aplicação, Infraestrutura e API completos (cadastro, login JWT, endpoint de usuário autenticado). Módulo Catálogo com Domínio (`Restaurante`, `Cardapio`, `ItemCardapio`), Aplicação (cadastro de Restaurante) e Infraestrutura (`IRestauranteRepositorio` com EF Core).
+Módulo Autenticação com Domínio, Aplicação, Infraestrutura e API completos (cadastro, login JWT, endpoint de usuário autenticado). Módulo Catálogo com Domínio (`Restaurante`, `Cardapio`, `ItemCardapio`), Aplicação (cadastro e leitura de Restaurante, com cache-aside/write-through em Redis) e Infraestrutura (`IRestauranteRepositorio` com EF Core). Módulo Pedidos com Domínio (`Pedido`/`ItemPedido`, máquina de estados e eventos de domínio ainda não publicados) — Aplicação/Infraestrutura/API ainda não iniciados.
 
 `Resultado<T>` (Result Pattern) extraído para o Shared Kernel `Compartilhado.Dominio`, compartilhado entre módulos.
 

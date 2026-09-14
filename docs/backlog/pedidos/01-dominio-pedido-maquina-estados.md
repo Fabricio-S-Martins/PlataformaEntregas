@@ -2,7 +2,7 @@
 
 **Módulo:** Pedidos
 **Camada:** Domínio
-**Status:** todo
+**Status:** feito
 
 ## Contexto
 

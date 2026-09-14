@@ -20,6 +20,7 @@
     <Project Path="Modulos/Catalogo/Modulos.Catalogo.Infraestrutura/Modulos.Catalogo.Infraestrutura.csproj" Id="b63c3355-2bcc-4361-800b-be48cf764891" />
   </Folder>
   <Folder Name="/Modulos/Pedidos/">
+    <Project Path="Modulos/Pedidos/Modulos.Pedidos.Aplicacao/Modulos.Pedidos.Aplicacao.csproj" Id="aba258ec-e079-4e8c-a8bf-6bc22e19bcc5" />
     <Project Path="Modulos/Pedidos/Modulos.Pedidos.Dominio/Modulos.Pedidos.Dominio.csproj" Id="92225895-2e88-4945-a08e-32384f96885b" />
   </Folder>
   <Folder Name="/Testes/" />

@@ -47,8 +47,9 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 
 | Task | Status |
 |---|---|
-| [01 - Modelar o agregado Pedido com máquina de estados e eventos de domínio](pedidos/01-dominio-pedido-maquina-estados.md) | todo |
-| [02 - Cobrir Pedido e ItemPedido com testes automatizados](pedidos/02-testes-pedido-item-pedido.md) | todo |
+| [01 - Modelar o agregado Pedido com máquina de estados e eventos de domínio](pedidos/01-dominio-pedido-maquina-estados.md) | feito |
+| [02 - Cobrir Pedido e ItemPedido com testes automatizados](pedidos/02-testes-pedido-item-pedido.md) | feito |
+| [03 - Criar casos de uso do Pedido e publicar os eventos de domínio](pedidos/03-aplicacao-pedido.md) | feito |
 
 ## Módulo Pagamentos
 
