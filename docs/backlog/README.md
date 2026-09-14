@@ -45,7 +45,10 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 
 ## Módulo Pedidos
 
-_ainda não iniciado_
+| Task | Status |
+|---|---|
+| [01 - Modelar o agregado Pedido com máquina de estados e eventos de domínio](pedidos/01-dominio-pedido-maquina-estados.md) | todo |
+| [02 - Cobrir Pedido e ItemPedido com testes automatizados](pedidos/02-testes-pedido-item-pedido.md) | todo |
 
 ## Módulo Pagamentos
 

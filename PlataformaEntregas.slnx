@@ -19,6 +19,9 @@
     <Project Path="Modulos/Catalogo/Modulos.Catalogo.Dominio/Modulos.Catalogo.Dominio.csproj" />
     <Project Path="Modulos/Catalogo/Modulos.Catalogo.Infraestrutura/Modulos.Catalogo.Infraestrutura.csproj" Id="b63c3355-2bcc-4361-800b-be48cf764891" />
   </Folder>
+  <Folder Name="/Modulos/Pedidos/">
+    <Project Path="Modulos/Pedidos/Modulos.Pedidos.Dominio/Modulos.Pedidos.Dominio.csproj" Id="92225895-2e88-4945-a08e-32384f96885b" />
+  </Folder>
   <Folder Name="/Testes/" />
   <Folder Name="/Testes/Autenticacao/">
     <Project Path="Testes/Autenticacao/Modulos.Autenticacao.Aplicacao.Testes/Modulos.Autenticacao.Aplicacao.Testes.csproj" />
