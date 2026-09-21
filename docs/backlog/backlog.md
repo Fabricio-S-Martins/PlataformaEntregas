@@ -52,6 +52,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [03 - Criar casos de uso do Pedido e publicar os eventos de domínio](pedidos/03-aplicacao-pedido.md) | feito |
 | [04 - Cobrir os casos de uso do Pedido com testes automatizados](pedidos/04-testes-aplicacao-pedido.md) | feito |
 | [05 - Implementar IPedidoRepositorio com EF Core](pedidos/05-infraestrutura-pedido-repositorio.md) | feito |
+| [06 - Expor endpoints do ciclo de vida do Pedido](pedidos/06-api-pedido.md) | todo |
 
 ## Módulo Pagamentos
 
