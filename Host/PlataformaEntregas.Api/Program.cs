@@ -1,13 +1,13 @@
 using Microsoft.OpenApi;
 using Modulos.Autenticacao.Api;
 using Modulos.Catalogo.Api;
-using Modulos.Pedidos.Infraestrutura;
+using Modulos.Pedidos.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.RegistrarAutenticacaoApi(builder.Configuration);
 builder.Services.RegistrarCatalogoApi(builder.Configuration);
-builder.Services.RegistrarPedidosInfraestrutura(builder.Configuration);
+builder.Services.RegistrarPedidosApi(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options =>
@@ -33,6 +33,7 @@ app.UseAuthorization();
 var api = app.MapGroup("/api");
 api.MapAutenticacaoEndpoints();
 api.MapCatalogoEndpoints();
+api.MapPedidosEndpoints();
 
 if (app.Environment.IsDevelopment())
 {

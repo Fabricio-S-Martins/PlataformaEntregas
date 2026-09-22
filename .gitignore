@@ -488,3 +488,6 @@ $RECYCLE.BIN/
 
 # Obsidian (configuracao local do cofre)
 docs/.obsidian/
+
+# Planos e notas de sessao (fora do git)
+docs/sessoes/

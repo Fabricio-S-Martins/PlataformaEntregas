@@ -17,7 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Modulos\Autenticacao\Modulos.Autenticacao.Api\Modulos.Autenticacao.Api.csproj" />
     <ProjectReference Include="..\..\Modulos\Catalogo\Modulos.Catalogo.Api\Modulos.Catalogo.Api.csproj" />
-    <ProjectReference Include="..\..\Modulos\Pedidos\Modulos.Pedidos.Infraestrutura\Modulos.Pedidos.Infraestrutura.csproj" />
+    <ProjectReference Include="..\..\Modulos\Pedidos\Modulos.Pedidos.Api\Modulos.Pedidos.Api.csproj" />
   </ItemGroup>
 
 </Project>
