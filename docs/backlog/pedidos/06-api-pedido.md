@@ -2,7 +2,7 @@
 
 **Módulo:** Pedidos
 **Camada:** API
-**Status:** todo
+**Status:** feito
 
 ## Contexto
 
