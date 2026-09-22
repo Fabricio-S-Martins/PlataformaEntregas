@@ -1,5 +1,7 @@
 # Pedidos
 
+[Documentação](../../README.md)
+
 Um pedido é feito por um cliente a um restaurante, reúne itens e passa por etapas até a entrega.
 
 ## Etapas
