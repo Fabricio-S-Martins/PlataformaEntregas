@@ -42,6 +42,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [06 - Implementar IRestauranteRepositorio com EF Core](catalogo/06-infraestrutura-restaurante-repositorio.md) | feito |
 | [07 - Expor endpoint de cadastro de Restaurante e gerar a Migration inicial do Catálogo](catalogo/07-api-cadastrar-restaurante.md) | feito |
 | [08 - Cache de leitura do Restaurante com Redis (cache-aside + write-through)](catalogo/08-cache-leitura-redis.md) | feito |
+| [09 - Proteger o cache do Restaurante contra cache stampede com lock distribuído no Redis](catalogo/09-lock-distribuido-cache-restaurante.md) | feito |
 
 ## Módulo Pedidos
 
@@ -52,7 +53,7 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [03 - Criar casos de uso do Pedido e publicar os eventos de domínio](pedidos/03-aplicacao-pedido.md) | feito |
 | [04 - Cobrir os casos de uso do Pedido com testes automatizados](pedidos/04-testes-aplicacao-pedido.md) | feito |
 | [05 - Implementar IPedidoRepositorio com EF Core](pedidos/05-infraestrutura-pedido-repositorio.md) | feito |
-| [06 - Expor endpoints do ciclo de vida do Pedido](pedidos/06-api-pedido.md) | todo |
+| [06 - Expor endpoints do ciclo de vida do Pedido](pedidos/06-api-pedido.md) | feito |
 
 ## Módulo Pagamentos
 

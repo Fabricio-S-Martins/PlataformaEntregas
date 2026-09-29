@@ -22,6 +22,7 @@ Cada cardápio pertence a um restaurante e reúne itens. Hoje, o sistema ainda n
 
 - [Cadastro de restaurante](../../fluxos/catalogo-cadastro-restaurante.md)
 - [Consulta de restaurante](../../fluxos/catalogo-consulta-restaurante.md)
+- [Montagem de cardápio](../../fluxos/catalogo-montagem-cardapio.md)
 
 ## Integração
 
