@@ -15,3 +15,5 @@ Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
 | [07 - Fechar o Pedido com total calculado, permitindo nova tentativa e bloqueando novos itens](07-dominio-fechar-pedido.md) | todo |
 | [08 - Expor o fechamento do Pedido publicando o contrato de integração e exigir autenticação no confirmar-pagamento](08-api-fechar-pedido.md) | todo |
 | [09 - Confirmar o pagamento do Pedido ao receber a aprovação de Pagamentos, registrando em log quando o Pedido não puder ser pago](09-confirmar-pagamento-por-integracao.md) | todo |
+| [XX - Impedir que um usuário feche ou pague o Pedido de outro cliente](XX-autorizacao-dono-do-pedido.md) | adiada (revisitar depois do card 08) |
+| [XX - Expirar Pedidos abandonados em Criado](XX-expirar-pedidos-abandonados.md) | adiada (revisitar depois de Pagamentos) |
