@@ -1,6 +1,10 @@
+---
+tags: [backlog/tarefa, modulo/pedidos, fluxo/pedido-status, status/pendente]
+---
+
 # 09 — Confirmar o pagamento do Pedido ao receber a aprovação de Pagamentos, registrando em log quando o Pedido não puder ser pago
 
-**Módulo:** Pedidos | **Camada:** Aplicação | **Status:** todo | **Deps:** Compartilhado 03, Pedidos 08
+**Módulo:** Pedidos | **Camada:** Aplicação | **Deps:** Compartilhado 03, Pedidos 08
 
 ## O que fazer
 
@@ -19,7 +23,7 @@
 - [ ] **e:** Capturar `ArgumentException` e `InvalidOperationException` e registrar aviso com `PedidoId`, `PagamentoId`, `Valor` e a mensagem da exceção, sem relançar.
 
 ### 2. Documentação
-- [ ] **a:** Atualizar `docs/fluxos/pedido-operacao.md` com o passo de confirmação por pagamento aprovado e o caso de Pedido cancelado
+- [ ] **a:** Atualizar `docs/documentacao/modulos/pedidos/fluxos/pedido-operacao.md` com o passo de confirmação por pagamento aprovado e o caso de Pedido cancelado
 - [ ] **b:** Perguntar ao Dev se quer o plano de documentação do restante do módulo/fluxo
 
 ### 3. QA & Testes

@@ -1,6 +1,10 @@
+---
+tags: [backlog/tarefa, modulo/pedidos, fluxo/pedido-operacao, status/pendente]
+---
+
 # 07 — Fechar o Pedido com total calculado, permitindo nova tentativa e bloqueando novos itens
 
-**Módulo:** Pedidos | **Camada:** Domínio | **Status:** todo | **Deps:** —
+**Módulo:** Pedidos | **Camada:** Domínio | **Deps:** —
 
 ## O que fazer
 
@@ -19,7 +23,7 @@
 - [ ] **e:** Em `AdicionarItem`, logo após a validação de status, falhar com `Pedido fechado não aceita novos itens.` se `FechadoEm` tiver valor.
 
 ### 2. Documentação
-- [ ] **a:** Atualizar `docs/modulos/pedidos/pedidos.md` com as regras de fechar o Pedido e do bloqueio de novos itens
+- [ ] **a:** Atualizar `docs/documentacao/modulos/pedidos/pedidos.md` com as regras de fechar o Pedido e do bloqueio de novos itens
 - [ ] **b:** Perguntar ao Dev se quer o plano de documentação do restante do módulo/fluxo
 
 ### 3. QA & Testes

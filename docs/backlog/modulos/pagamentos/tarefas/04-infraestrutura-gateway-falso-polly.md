@@ -1,6 +1,10 @@
+---
+tags: [backlog/tarefa, modulo/pagamentos, status/pendente]
+---
+
 # 04 — Criar o gateway de pagamento falso configurável com retry, circuit breaker e timeout do Polly e cobrir com testes automatizados
 
-**Módulo:** Pagamentos | **Camada:** Infraestrutura | **Status:** todo | **Deps:** Pagamentos 02, Pagamentos 03
+**Módulo:** Pagamentos | **Camada:** Infraestrutura | **Deps:** Pagamentos 02, Pagamentos 03
 
 ## O que fazer
 
@@ -30,8 +34,8 @@
 - [ ] **i:** No `appsettings.json` do host `PlataformaEntregas.Api`, adicionar a seção `GatewayPagamentoFalso` com os três percentuais.
 
 ### 2. Documentação
-- [ ] **a:** Atualizar `docs/fluxos/pagamentos-processamento.md` com a espera e as tentativas da cobrança, o circuito aberto e o resultado `Falhou`
-- [ ] **b:** Atualizar `docs/modulos/pagamentos/pagamentos.md` com o gateway falso e a configuração dos percentuais
+- [ ] **a:** Atualizar `docs/documentacao/modulos/pagamentos/fluxos/pagamentos-processamento.md` com a espera e as tentativas da cobrança, o circuito aberto e o resultado `Falhou`
+- [ ] **b:** Atualizar `docs/documentacao/modulos/pagamentos/pagamentos.md` com o gateway falso e a configuração dos percentuais
 - [ ] **c:** Perguntar ao Dev se quer o plano de documentação do restante do módulo/fluxo
 
 ### 3. QA & Testes

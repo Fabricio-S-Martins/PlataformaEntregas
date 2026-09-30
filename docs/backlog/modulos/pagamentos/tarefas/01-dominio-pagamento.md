@@ -1,6 +1,10 @@
+---
+tags: [backlog/tarefa, modulo/pagamentos, status/pendente]
+---
+
 # 01 — Modelar o agregado Pagamento com status e transições no Domínio e cobrir com testes automatizados
 
-**Módulo:** Pagamentos | **Camada:** Domínio | **Status:** todo | **Deps:** —
+**Módulo:** Pagamentos | **Camada:** Domínio | **Deps:** —
 
 ## O que fazer
 
@@ -20,7 +24,7 @@
 - [ ] **g:** Em `Pagamento`, criar os métodos `Aprovar`, `Recusar` e `MarcarFalha`, cada um retornando `Resultado<Pagamento>`. Se `Status != StatusPagamento.Pendente`, falham com `Pagamento em {Status} não pode ser aprovado.`, `... não pode ser recusado.` e `... não pode ser marcado como falho.`, respectivamente. Se passar, mudam o `Status` para `Aprovado`, `Recusado` e `Falhou`, e retornam `ComSucesso(this)`.
 
 ### 2. Documentação
-- [ ] **a:** Criar `docs/modulos/pagamentos/pagamentos.md` com o que o módulo é, os status do pagamento e as regras de negócio
+- [ ] **a:** Criar `docs/documentacao/modulos/pagamentos/pagamentos.md` com o que o módulo é, os status do pagamento e as regras de negócio
 - [ ] **b:** Perguntar ao Dev se quer o plano de documentação do restante do módulo/fluxo
 
 ### 3. QA & Testes

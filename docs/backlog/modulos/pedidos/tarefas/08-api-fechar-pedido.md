@@ -1,6 +1,10 @@
+---
+tags: [backlog/tarefa, modulo/pedidos, fluxo/pedido-operacao, status/pendente]
+---
+
 # 08 — Expor o fechamento do Pedido publicando o contrato de integração e exigir autenticação no confirmar-pagamento
 
-**Módulo:** Pedidos | **Camada:** Aplicação / Infraestrutura / API | **Status:** todo | **Deps:** Compartilhado 03, Pedidos 07
+**Módulo:** Pedidos | **Camada:** Aplicação / Infraestrutura / API | **Deps:** Compartilhado 03, Pedidos 07
 
 ## O que fazer
 
@@ -28,8 +32,8 @@
 - [ ] **d:** Em `ConfirmarPagamentoEndpoint`, exigir autenticação e declarar o `401` entre as respostas.
 
 ### 4. Documentação
-- [ ] **a:** Atualizar `docs/fluxos/pedido-operacao.md` com o passo de fechar o Pedido e o contrato publicado
-- [ ] **b:** Atualizar `docs/modulos/pedidos/pedidos-api.md` com a rota `fechar` e a exigência de autenticação em `fechar` e `confirmar-pagamento`
+- [ ] **a:** Atualizar `docs/documentacao/modulos/pedidos/fluxos/pedido-operacao.md` com o passo de fechar o Pedido e o contrato publicado
+- [ ] **b:** Atualizar `docs/documentacao/modulos/pedidos/api/pedidos-api.md` com a rota `fechar` e a exigência de autenticação em `fechar` e `confirmar-pagamento`
 - [ ] **c:** Perguntar ao Dev se quer o plano de documentação do restante do módulo/fluxo
 
 ### 5. QA & Testes

@@ -1,6 +1,10 @@
+---
+tags: [backlog/tarefa, modulo/pagamentos, status/pendente]
+---
+
 # 02 — Processar o pagamento ao receber o Pedido fechado, publicar a aprovação e cobrir com testes automatizados
 
-**Módulo:** Pagamentos | **Camada:** Aplicação | **Status:** todo | **Deps:** Compartilhado 03, Pagamentos 01
+**Módulo:** Pagamentos | **Camada:** Aplicação | **Deps:** Compartilhado 03, Pagamentos 01
 
 ## O que fazer
 
@@ -26,8 +30,8 @@
 - [ ] **k:** Na raiz do projeto, criar `InjecaoDeDependencia`, com um método de extensão de `IServiceCollection` chamado `RegistrarPagamentosAplicacao`, registrando o MediatR a partir do assembly, como em `RegistrarPedidosAplicacao`.
 
 ### 2. Documentação
-- [ ] **a:** Criar `docs/fluxos/pagamentos-processamento.md` com o fluxo de cobrança do Pedido fechado (passos e diagrama Mermaid)
-- [ ] **b:** Atualizar `docs/modulos/pagamentos/pagamentos.md` com o link do fluxo e as regras de duplicidade, recusa e falha
+- [ ] **a:** Criar `docs/documentacao/modulos/pagamentos/fluxos/pagamentos-processamento.md` com o fluxo de cobrança do Pedido fechado (passos e diagrama Mermaid)
+- [ ] **b:** Atualizar `docs/documentacao/modulos/pagamentos/pagamentos.md` com o link do fluxo e as regras de duplicidade, recusa e falha
 - [ ] **c:** Perguntar ao Dev se quer o plano de documentação do restante do módulo/fluxo
 
 ### 3. QA & Testes
