@@ -1,9 +1,4 @@
 {
-  "permissions": {
-    "allow": [
-      "Skill(arquitetura-e-qualidade *)"
-    ]
-  },
   "enabledPlugins": {
     "arquitetura-e-qualidade@arquitetura-e-qualidade": true
   }

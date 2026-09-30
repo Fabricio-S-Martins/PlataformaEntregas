@@ -50,3 +50,8 @@ Módulo Autenticação com Domínio, Aplicação, Infraestrutura e API completos
 O host da aplicação é o `PlataformaEntregas.Api` (em `Host/`): um host único que compõe todos os módulos (Composition Root). Cada módulo expõe uma biblioteca `Modulos.<Modulo>.Api` com os endpoints e o registro de DI/endpoints; nenhum módulo tem `Program.cs` próprio.
 
 Backlog e progresso detalhado em `docs/backlog/`.
+
+Commit só quando pedido e só no repo da conversa, nunca em outro; `git add` só dos arquivos da tarefa.
+
+Ao iniciar, concluir ou cancelar um card, trocar só a tag `status/...` em `tags:` (pendente, em-andamento, concluido, cancelado).
+Ao alterar código que muda comportamento observável (rota, regra, mensagem, configuração), atualizar o doc afetado em `docs/documentacao/`.

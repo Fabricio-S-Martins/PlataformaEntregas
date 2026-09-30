@@ -1,13 +1,15 @@
+---
+tags: [backlog/geral]
+---
+
 # Backlog — PlataformaEntregas
 
-Índice geral. Cada módulo tem sua pasta em `docs/backlog/<modulo>/`, com um índice `<modulo>.md` e um arquivo por task.
-
-Status possíveis: `todo`, `em andamento`, `feito`, `bloqueado`.
+Índice geral. Cada módulo tem sua pasta em `docs/backlog/modulos/<modulo>/`, com um índice `<modulo>.md` e um arquivo por task.
 
 | Módulo |
 |---|
-| [Compartilhado](compartilhado/compartilhado.md) |
-| [Módulo Autenticação](autenticacao/autenticacao.md) |
-| [Módulo Catálogo](catalogo/catalogo.md) |
-| [Módulo Pedidos](pedidos/pedidos.md) |
-| [Módulo Pagamentos](pagamentos/pagamentos.md) |
+| [Compartilhado](./modulos/compartilhado/compartilhado.md) |
+| [Módulo Autenticação](./modulos/autenticacao/autenticacao.md) |
+| [Módulo Catálogo](./modulos/catalogo/catalogo.md) |
+| [Módulo Pedidos](./modulos/pedidos/pedidos.md) |
+| [Módulo Pagamentos](./modulos/pagamentos/pagamentos.md) |
