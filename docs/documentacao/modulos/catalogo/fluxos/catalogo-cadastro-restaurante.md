@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/fluxo, modulo/catalogo, fluxo/catalogo-cadastro-restaurante]
+tags: [documentacao, modulo/catalogo, fluxo/catalogo-cadastro-restaurante]
 ---
 
 # Cadastro de restaurante

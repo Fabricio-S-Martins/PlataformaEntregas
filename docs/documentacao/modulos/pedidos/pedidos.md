@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/modulo, modulo/pedidos]
+tags: [documentacao, modulo/pedidos]
 ---
 
 # Pedidos

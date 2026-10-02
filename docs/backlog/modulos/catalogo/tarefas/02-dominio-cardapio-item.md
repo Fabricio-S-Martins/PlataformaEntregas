@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/catalogo, fluxo/catalogo-montagem-cardapio, status/concluido]
+tags: [backlog, modulo/catalogo, fluxo/catalogo-montagem-cardapio, tarefa/concluido]
 ---
 
 # 02 — Modelar Cardapio e ItemCardapio no Domínio

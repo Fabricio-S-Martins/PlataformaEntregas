@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/geral]
+tags: [documentacao]
 ---
 
 # Documentação

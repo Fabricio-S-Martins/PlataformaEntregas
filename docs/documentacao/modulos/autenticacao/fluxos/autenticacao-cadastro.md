@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/fluxo, modulo/autenticacao, fluxo/autenticacao-cadastro]
+tags: [documentacao, modulo/autenticacao, fluxo/autenticacao-cadastro]
 ---
 
 # Cadastro de usuário

@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/pedidos, fluxo/pedido-status, status/pendente]
+tags: [backlog, modulo/pedidos, fluxo/pedido-status, tarefa/pendente]
 ---
 
 # 09 — Confirmar o pagamento do Pedido ao receber a aprovação de Pagamentos, registrando em log quando o Pedido não puder ser pago

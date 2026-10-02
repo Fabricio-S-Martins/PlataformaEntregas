@@ -1,5 +1,5 @@
 ---
-tags: [backlog/modulo, modulo/compartilhado]
+tags: [backlog, modulo/compartilhado]
 ---
 
 # Compartilhado

@@ -53,5 +53,5 @@ Backlog e progresso detalhado em `docs/backlog/`.
 
 Commit só quando pedido e só no repo da conversa, nunca em outro; `git add` só dos arquivos da tarefa.
 
-Ao iniciar, concluir ou cancelar um card, trocar só a tag `status/...` em `tags:` (pendente, em-andamento, concluido, cancelado).
+Ao iniciar, concluir ou cancelar um card, trocar só a tag `tarefa/...` em `tags:` (pendente, em-andamento, concluido, bloqueado, cancelado).
 Ao alterar código que muda comportamento observável (rota, regra, mensagem, configuração), atualizar o doc afetado em `docs/documentacao/`.

@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/autenticacao, fluxo/autenticacao-cadastro, status/concluido]
+tags: [backlog, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/concluido]
 ---
 
 # 12 — Adotar Result Pattern nas invariantes do Usuario

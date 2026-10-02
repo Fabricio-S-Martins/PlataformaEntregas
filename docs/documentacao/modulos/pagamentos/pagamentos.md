@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/modulo, modulo/pagamentos]
+tags: [documentacao, modulo/pagamentos]
 ---
 
 # Pagamentos

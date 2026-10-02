@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/modulo, modulo/autenticacao]
+tags: [documentacao, modulo/autenticacao]
 ---
 
 # Autenticação

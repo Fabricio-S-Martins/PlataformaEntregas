@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/autenticacao, fluxo/autenticacao-cadastro, status/concluido]
+tags: [backlog, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/concluido]
 ---
 
 # 01 — Domínio: entidade Usuario

@@ -1,5 +1,5 @@
 ---
-tags: [backlog/decisao, modulo/pedidos, status/adiada]
+tags: [backlog, modulo/pedidos, decisao/adiada]
 ---
 # Como expirar Pedidos abandonados em Criado?
 

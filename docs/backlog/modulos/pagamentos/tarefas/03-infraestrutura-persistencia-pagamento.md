@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/pagamentos, status/pendente]
+tags: [backlog, modulo/pagamentos, tarefa/pendente]
 ---
 
 # 03 — Persistir o Pagamento no Postgres, registrar o módulo no host e gerar a Migration inicial

@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/api, modulo/pedidos]
+tags: [documentacao, modulo/pedidos, camada/api]
 ---
 
 # Integrar com Pedidos

@@ -1,5 +1,5 @@
 ---
-tags: [backlog/modulo, modulo/autenticacao]
+tags: [backlog, modulo/autenticacao]
 ---
 
 # Módulo Autenticação

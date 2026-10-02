@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/api, modulo/catalogo]
+tags: [documentacao, modulo/catalogo, camada/api]
 ---
 
 # Integrar com Catálogo

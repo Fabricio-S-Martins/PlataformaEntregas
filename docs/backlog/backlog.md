@@ -1,5 +1,5 @@
 ---
-tags: [backlog/geral]
+tags: [backlog]
 ---
 
 # Backlog — PlataformaEntregas

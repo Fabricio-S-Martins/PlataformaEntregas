@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, status/concluido]
+tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, tarefa/concluido]
 ---
 
 # 01 — Modelar a entidade Restaurante no Domínio

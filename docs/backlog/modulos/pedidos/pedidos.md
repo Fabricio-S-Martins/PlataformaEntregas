@@ -1,5 +1,5 @@
 ---
-tags: [backlog/modulo, modulo/pedidos]
+tags: [backlog, modulo/pedidos]
 ---
 
 # Módulo Pedidos

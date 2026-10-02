@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/autenticacao, status/concluido]
+tags: [backlog, modulo/autenticacao, tarefa/concluido]
 ---
 
 # 09 — Validar JWT no pipeline e expor endpoint de usuário autenticado

@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/fluxo, modulo/pedidos, fluxo/pedido-operacao]
+tags: [documentacao, modulo/pedidos, fluxo/pedido-operacao]
 ---
 
 # O que acontece a cada ação

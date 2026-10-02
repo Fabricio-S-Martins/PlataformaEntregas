@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/pedidos, fluxo/pedido-operacao, fluxo/pedido-status, status/concluido]
+tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, fluxo/pedido-status, tarefa/concluido]
 ---
 
 # 04 — Cobrir os casos de uso do Pedido com testes automatizados

@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/autenticacao, status/concluido]
+tags: [backlog, modulo/autenticacao, tarefa/concluido]
 ---
 
 # XX — Infraestrutura: fábrica de design-time e primeira Migration

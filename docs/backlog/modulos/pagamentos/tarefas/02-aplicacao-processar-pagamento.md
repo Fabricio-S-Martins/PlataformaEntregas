@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/pagamentos, status/pendente]
+tags: [backlog, modulo/pagamentos, tarefa/pendente]
 ---
 
 # 02 — Processar o pagamento ao receber o Pedido fechado, publicar a aprovação e cobrir com testes automatizados

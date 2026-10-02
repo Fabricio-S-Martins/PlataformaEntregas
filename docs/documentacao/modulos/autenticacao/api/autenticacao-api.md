@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/api, modulo/autenticacao]
+tags: [documentacao, modulo/autenticacao, camada/api]
 ---
 
 # Integrar com Autenticação

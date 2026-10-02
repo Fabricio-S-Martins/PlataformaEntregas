@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/autenticacao, status/concluido]
+tags: [backlog, modulo/autenticacao, tarefa/concluido]
 ---
 
 # 05 — Infraestrutura: subir PostgreSQL via Docker Compose

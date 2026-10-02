@@ -1,5 +1,5 @@
 ---
-tags: [backlog/decisao, modulo/pagamentos, modulo/pedidos, status/adiada]
+tags: [backlog, modulo/pagamentos, modulo/pedidos, decisao/adiada]
 ---
 # Como estornar o pagamento aprovado depois que o Pedido foi cancelado?
 

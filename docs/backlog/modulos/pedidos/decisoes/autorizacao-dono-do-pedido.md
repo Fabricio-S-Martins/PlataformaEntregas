@@ -1,5 +1,5 @@
 ---
-tags: [backlog/decisao, modulo/pedidos, status/adiada]
+tags: [backlog, modulo/pedidos, decisao/adiada]
 ---
 # Como impedir que um usuário feche ou pague o Pedido de outro cliente?
 

@@ -1,5 +1,5 @@
 ---
-tags: [backlog/decisao, modulo/autenticacao, status/adiada]
+tags: [backlog, modulo/autenticacao, decisao/adiada]
 ---
 # Separar um Persistence Model da entidade de Domínio?
 

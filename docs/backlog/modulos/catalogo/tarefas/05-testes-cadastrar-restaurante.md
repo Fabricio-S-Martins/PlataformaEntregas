@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, status/concluido]
+tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, tarefa/concluido]
 ---
 
 # 05 — Cobrir caso de uso de cadastro de Restaurante com testes automatizados

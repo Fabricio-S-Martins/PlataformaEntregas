@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/pedidos, fluxo/pedido-operacao, status/concluido]
+tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, tarefa/concluido]
 ---
 
 # 05 — Implementar IPedidoRepositorio com EF Core

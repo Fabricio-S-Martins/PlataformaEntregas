@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/fluxo, modulo/catalogo, fluxo/catalogo-consulta-restaurante]
+tags: [documentacao, modulo/catalogo, fluxo/catalogo-consulta-restaurante]
 ---
 
 # Consulta de restaurante

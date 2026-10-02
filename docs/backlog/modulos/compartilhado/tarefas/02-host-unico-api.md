@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/compartilhado, status/concluido]
+tags: [backlog, modulo/compartilhado, tarefa/concluido]
 ---
 
 # 02 — Criar host único da API e converter Modulos.Autenticacao.Api em biblioteca

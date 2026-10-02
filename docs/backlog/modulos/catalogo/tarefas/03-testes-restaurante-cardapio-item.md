@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, fluxo/catalogo-montagem-cardapio, status/concluido]
+tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, fluxo/catalogo-montagem-cardapio, tarefa/concluido]
 ---
 
 # 03 — Cobrir Restaurante, Cardapio e ItemCardapio com testes automatizados

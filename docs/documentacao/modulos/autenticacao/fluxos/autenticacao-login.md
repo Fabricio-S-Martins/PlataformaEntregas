@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/fluxo, modulo/autenticacao, fluxo/autenticacao-login]
+tags: [documentacao, modulo/autenticacao, fluxo/autenticacao-login]
 ---
 
 # Login

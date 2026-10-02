@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/modulo, modulo/catalogo]
+tags: [documentacao, modulo/catalogo]
 ---
 
 # Catálogo

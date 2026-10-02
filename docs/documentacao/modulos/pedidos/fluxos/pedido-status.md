@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/fluxo, modulo/pedidos, fluxo/pedido-status]
+tags: [documentacao, modulo/pedidos, fluxo/pedido-status]
 ---
 
 # Etapas do pedido

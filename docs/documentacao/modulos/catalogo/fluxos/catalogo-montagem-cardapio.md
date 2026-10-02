@@ -1,5 +1,5 @@
 ---
-tags: [documentacao/fluxo, modulo/catalogo, fluxo/catalogo-montagem-cardapio]
+tags: [documentacao, modulo/catalogo, fluxo/catalogo-montagem-cardapio]
 ---
 
 # Montagem de cardápio

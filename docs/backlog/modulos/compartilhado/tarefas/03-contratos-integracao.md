@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/compartilhado, status/pendente]
+tags: [backlog, modulo/compartilhado, tarefa/pendente]
 ---
 
 # 03 — Criar o projeto de contratos de integração entre módulos com os eventos de pedido fechado e pagamento aprovado

@@ -1,5 +1,5 @@
 ---
-tags: [backlog/tarefa, modulo/pedidos, fluxo/pedido-operacao, status/pendente]
+tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, camada/api, tarefa/pendente]
 ---
 
 # 08 — Expor o fechamento do Pedido publicando o contrato de integração e exigir autenticação no confirmar-pagamento
