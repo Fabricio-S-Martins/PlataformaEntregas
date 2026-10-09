@@ -1,5 +1,8 @@
 <Solution>
   <Folder Name="/Compartilhado/" />
+  <Folder Name="/Compartilhado/Compartilhado.Contratos/">
+    <Project Path="Compartilhado/Compartilhado.Contratos/Compartilhado.Contratos.csproj" />
+  </Folder>
   <Folder Name="/Compartilhado/Compartilhado.Dominio/">
     <Project Path="Compartilhado/Compartilhado.Dominio/Compartilhado.Dominio.csproj" />
   </Folder>
