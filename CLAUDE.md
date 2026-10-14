@@ -54,3 +54,4 @@ Backlog e progresso detalhado em `docs/backlog/`.
 Commit só quando pedido e só no repo da conversa, nunca em outro; `git add` só dos arquivos da tarefa.
 
 Executar tarefa/card → usar a skill executar-tarefa.
+Ambiente `Production` (`ASPNETCORE_ENVIRONMENT`, `DOTNET_ENVIRONMENT`, `--environment`): nunca usar nem como contorno de bloqueio (ex: validação de DI) sem perguntar antes, listando as opções de forma clara e objetiva.

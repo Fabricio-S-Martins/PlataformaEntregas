@@ -9,5 +9,13 @@
         "url": "https://github.com/Fabricio-S-Martins/plugin-arquitetura-e-qualidade.git"
       }
     }
+  },
+  "permissions": {
+    "ask": [
+      "Bash(*ENVIRONMENT*Production*)",
+      "Bash(*--environment*Production*)",
+      "PowerShell(*ENVIRONMENT*Production*)",
+      "PowerShell(*--environment*Production*)"
+    ]
   }
 }
