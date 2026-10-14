@@ -25,3 +25,10 @@ Aprovado, Recusado e Falhou são finais: não mudam mais.
 - O pagamento precisa de um pedido válido e de valor maior que zero. Se os dois estiverem errados, os dois erros são informados juntos.
 - Só um pagamento Pendente pode ser aprovado, recusado ou marcado como falho.
 - Um pagamento finalizado nunca é reaberto. Uma nova tentativa do cliente cria um novo pagamento.
+- Pedido que já tem pagamento aprovado não é cobrado de novo.
+- Cobrança negada deixa o pagamento Recusado; erro técnico o deixa Falhou. Nenhum dos dois gera erro para quem fechou o pedido.
+- Só o pagamento aprovado gera o aviso de pagamento aprovado.
+
+## Fluxos
+
+- [Cobrança do Pedido Fechado](fluxos/pagamentos-processamento.md)

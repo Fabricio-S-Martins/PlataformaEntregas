@@ -23,6 +23,7 @@
     <Project Path="Modulos/Catalogo/Modulos.Catalogo.Infraestrutura/Modulos.Catalogo.Infraestrutura.csproj" Id="b63c3355-2bcc-4361-800b-be48cf764891" />
   </Folder>
   <Folder Name="/Modulos/Pagamentos/">
+    <Project Path="Modulos/Pagamentos/Modulos.Pagamentos.Aplicacao/Modulos.Pagamentos.Aplicacao.csproj" />
     <Project Path="Modulos/Pagamentos/Modulos.Pagamentos.Dominio/Modulos.Pagamentos.Dominio.csproj" Id="e553fb9c-ea32-4763-9dd0-c5fa6671e934" />
   </Folder>
   <Folder Name="/Modulos/Pedidos/">
@@ -42,6 +43,7 @@
     <Project Path="Testes/Catalogo/Modulos.Catalogo.Dominio.Testes/Modulos.Catalogo.Dominio.Testes.csproj" />
   </Folder>
   <Folder Name="/Testes/Pagamentos/">
+    <Project Path="Testes/Pagamentos/Modulos.Pagamentos.Aplicacao.Testes/Modulos.Pagamentos.Aplicacao.Testes.csproj" />
     <Project Path="Testes/Pagamentos/Modulos.Pagamentos.Dominio.Testes/Modulos.Pagamentos.Dominio.Testes.csproj" />
   </Folder>
   <Folder Name="/Testes/Pedidos/">
