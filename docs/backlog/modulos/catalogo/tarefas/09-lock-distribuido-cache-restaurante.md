@@ -4,7 +4,7 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-consulta-restaurante, tarefa/con
 
 # 09 — Proteger o cache do Restaurante contra cache stampede com lock distribuído no Redis
 
-**Módulo:** Catálogo | **Camada:** Aplicação / Infraestrutura | **Deps:** Catálogo 08
+**Módulo:** Catálogo | **Camada:** Aplicação / Infraestrutura | **Deps:** [[08-cache-leitura-redis|Catálogo 08]]
 
 ## O que fazer
 
