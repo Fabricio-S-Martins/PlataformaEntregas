@@ -1,8 +1,7 @@
-﻿namespace Modulos.Autenticacao.Aplicacao.Servicos
+﻿namespace Modulos.Autenticacao.Aplicacao.Servicos;
+
+public interface ISenhaServico
 {
-    public interface ISenhaServico
-    {
-        string GerarHash(string senha);
-        bool VerificarHash(string senha, string senhaHash);
-    }
+    string GerarHash(string senha);
+    bool VerificarHash(string senha, string senhaHash);
 }

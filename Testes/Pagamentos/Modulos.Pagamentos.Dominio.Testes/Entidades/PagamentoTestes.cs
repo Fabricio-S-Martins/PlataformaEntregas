@@ -3,156 +3,155 @@ using Modulos.Pagamentos.Dominio.Entidades;
 using Modulos.Pagamentos.Dominio.Enums;
 using System.Globalization;
 
-namespace Modulos.Pagamentos.Dominio.Testes.Entidades
+namespace Modulos.Pagamentos.Dominio.Testes.Entidades;
+
+public class PagamentoTestes
 {
-    public class PagamentoTestes
+    private readonly Faker _faker;
+    public PagamentoTestes()
     {
-        private readonly Faker _faker;
-        public PagamentoTestes()
+        CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+        _faker = new Faker("pt_BR");
+    }
+
+    private Pagamento CriarPagamentoValido()
+    {
+        return Pagamento.Criar(Guid.NewGuid(), _faker.Random.Decimal(1, 1000)).Valor;
+    }
+
+    private Pagamento CriarPagamentoNoStatus(StatusPagamento status)
+    {
+        var pagamento = CriarPagamentoValido();
+        switch (status)
         {
-            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
-            _faker = new Faker("pt_BR");
+            case StatusPagamento.Aprovado:
+                pagamento.Aprovar();
+                break;
+            case StatusPagamento.Recusado:
+                pagamento.Recusar();
+                break;
+            case StatusPagamento.Falhou:
+                pagamento.MarcarFalha();
+                break;
         }
+        return pagamento;
+    }
 
-        private Pagamento CriarPagamentoValido()
-        {
-            return Pagamento.Criar(Guid.NewGuid(), _faker.Random.Decimal(1, 1000)).Valor;
-        }
+    [Fact]
+    public void Criar_ComDadosValidos_DeveRetornarResultadoSucessoComStatusPendente()
+    {
+        var resultado = Pagamento.Criar(Guid.NewGuid(), _faker.Random.Decimal(1, 1000));
 
-        private Pagamento CriarPagamentoNoStatus(StatusPagamento status)
-        {
-            var pagamento = CriarPagamentoValido();
-            switch (status)
-            {
-                case StatusPagamento.Aprovado:
-                    pagamento.Aprovar();
-                    break;
-                case StatusPagamento.Recusado:
-                    pagamento.Recusar();
-                    break;
-                case StatusPagamento.Falhou:
-                    pagamento.MarcarFalha();
-                    break;
-            }
-            return pagamento;
-        }
+        Assert.True(resultado.Sucesso);
+        Assert.Equal(StatusPagamento.Pendente, resultado.Valor.Status);
+        Assert.NotEqual(Guid.Empty, resultado.Valor.Id);
+        Assert.NotEqual(default, resultado.Valor.CriadoEm);
+    }
 
-        [Fact]
-        public void Criar_ComDadosValidos_DeveRetornarResultadoSucessoComStatusPendente()
-        {
-            var resultado = Pagamento.Criar(Guid.NewGuid(), _faker.Random.Decimal(1, 1000));
+    [Fact]
+    public void Criar_ComPedidoIdVazio_DeveRetornarResultadoFalha()
+    {
+        var resultado = Pagamento.Criar(Guid.Empty, _faker.Random.Decimal(1, 1000));
 
-            Assert.True(resultado.Sucesso);
-            Assert.Equal(StatusPagamento.Pendente, resultado.Valor.Status);
-            Assert.NotEqual(Guid.Empty, resultado.Valor.Id);
-            Assert.NotEqual(default, resultado.Valor.CriadoEm);
-        }
+        Assert.False(resultado.Sucesso);
+        Assert.Equal(["Identificador do Pedido inválido."], resultado.Erros);
+    }
 
-        [Fact]
-        public void Criar_ComPedidoIdVazio_DeveRetornarResultadoFalha()
-        {
-            var resultado = Pagamento.Criar(Guid.Empty, _faker.Random.Decimal(1, 1000));
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-1)]
+    public void Criar_ComValorZeroOuNegativo_DeveRetornarResultadoFalha(double valor)
+    {
+        var resultado = Pagamento.Criar(Guid.NewGuid(), (decimal)valor);
 
-            Assert.False(resultado.Sucesso);
-            Assert.Equal(["Identificador do Pedido inválido."], resultado.Erros);
-        }
+        Assert.False(resultado.Sucesso);
+        Assert.Equal(["Valor inválido."], resultado.Erros);
+    }
 
-        [Theory]
-        [InlineData(0)]
-        [InlineData(-1)]
-        public void Criar_ComValorZeroOuNegativo_DeveRetornarResultadoFalha(double valor)
-        {
-            var resultado = Pagamento.Criar(Guid.NewGuid(), (decimal)valor);
+    [Fact]
+    public void Criar_ComPedidoIdVazioEValorInvalido_DeveRetornarResultadoFalhaComOsDoisErros()
+    {
+        var resultado = Pagamento.Criar(Guid.Empty, 0);
 
-            Assert.False(resultado.Sucesso);
-            Assert.Equal(["Valor inválido."], resultado.Erros);
-        }
+        Assert.False(resultado.Sucesso);
+        Assert.Equal(["Identificador do Pedido inválido.", "Valor inválido."], resultado.Erros);
+    }
 
-        [Fact]
-        public void Criar_ComPedidoIdVazioEValorInvalido_DeveRetornarResultadoFalhaComOsDoisErros()
-        {
-            var resultado = Pagamento.Criar(Guid.Empty, 0);
+    [Fact]
+    public void Aprovar_ComPagamentoPendente_DeveRetornarResultadoSucessoComStatusAprovado()
+    {
+        var pagamento = CriarPagamentoValido();
 
-            Assert.False(resultado.Sucesso);
-            Assert.Equal(["Identificador do Pedido inválido.", "Valor inválido."], resultado.Erros);
-        }
+        var resultado = pagamento.Aprovar();
 
-        [Fact]
-        public void Aprovar_ComPagamentoPendente_DeveRetornarResultadoSucessoComStatusAprovado()
-        {
-            var pagamento = CriarPagamentoValido();
+        Assert.True(resultado.Sucesso);
+        Assert.Equal(StatusPagamento.Aprovado, pagamento.Status);
+    }
 
-            var resultado = pagamento.Aprovar();
+    [Fact]
+    public void Recusar_ComPagamentoPendente_DeveRetornarResultadoSucessoComStatusRecusado()
+    {
+        var pagamento = CriarPagamentoValido();
 
-            Assert.True(resultado.Sucesso);
-            Assert.Equal(StatusPagamento.Aprovado, pagamento.Status);
-        }
+        var resultado = pagamento.Recusar();
 
-        [Fact]
-        public void Recusar_ComPagamentoPendente_DeveRetornarResultadoSucessoComStatusRecusado()
-        {
-            var pagamento = CriarPagamentoValido();
+        Assert.True(resultado.Sucesso);
+        Assert.Equal(StatusPagamento.Recusado, pagamento.Status);
+    }
 
-            var resultado = pagamento.Recusar();
+    [Fact]
+    public void MarcarFalha_ComPagamentoPendente_DeveRetornarResultadoSucessoComStatusFalhou()
+    {
+        var pagamento = CriarPagamentoValido();
 
-            Assert.True(resultado.Sucesso);
-            Assert.Equal(StatusPagamento.Recusado, pagamento.Status);
-        }
+        var resultado = pagamento.MarcarFalha();
 
-        [Fact]
-        public void MarcarFalha_ComPagamentoPendente_DeveRetornarResultadoSucessoComStatusFalhou()
-        {
-            var pagamento = CriarPagamentoValido();
+        Assert.True(resultado.Sucesso);
+        Assert.Equal(StatusPagamento.Falhou, pagamento.Status);
+    }
 
-            var resultado = pagamento.MarcarFalha();
+    [Theory]
+    [InlineData(StatusPagamento.Aprovado)]
+    [InlineData(StatusPagamento.Recusado)]
+    [InlineData(StatusPagamento.Falhou)]
+    public void Aprovar_ComPagamentoFinalizado_DeveRetornarResultadoFalhaEManterStatus(StatusPagamento status)
+    {
+        var pagamento = CriarPagamentoNoStatus(status);
 
-            Assert.True(resultado.Sucesso);
-            Assert.Equal(StatusPagamento.Falhou, pagamento.Status);
-        }
+        var resultado = pagamento.Aprovar();
 
-        [Theory]
-        [InlineData(StatusPagamento.Aprovado)]
-        [InlineData(StatusPagamento.Recusado)]
-        [InlineData(StatusPagamento.Falhou)]
-        public void Aprovar_ComPagamentoFinalizado_DeveRetornarResultadoFalhaEManterStatus(StatusPagamento status)
-        {
-            var pagamento = CriarPagamentoNoStatus(status);
+        Assert.False(resultado.Sucesso);
+        Assert.Equal([$"Pagamento em {status} não pode ser aprovado."], resultado.Erros);
+        Assert.Equal(status, pagamento.Status);
+    }
 
-            var resultado = pagamento.Aprovar();
+    [Theory]
+    [InlineData(StatusPagamento.Aprovado)]
+    [InlineData(StatusPagamento.Recusado)]
+    [InlineData(StatusPagamento.Falhou)]
+    public void Recusar_ComPagamentoFinalizado_DeveRetornarResultadoFalhaEManterStatus(StatusPagamento status)
+    {
+        var pagamento = CriarPagamentoNoStatus(status);
 
-            Assert.False(resultado.Sucesso);
-            Assert.Equal([$"Pagamento em {status} não pode ser aprovado."], resultado.Erros);
-            Assert.Equal(status, pagamento.Status);
-        }
+        var resultado = pagamento.Recusar();
 
-        [Theory]
-        [InlineData(StatusPagamento.Aprovado)]
-        [InlineData(StatusPagamento.Recusado)]
-        [InlineData(StatusPagamento.Falhou)]
-        public void Recusar_ComPagamentoFinalizado_DeveRetornarResultadoFalhaEManterStatus(StatusPagamento status)
-        {
-            var pagamento = CriarPagamentoNoStatus(status);
+        Assert.False(resultado.Sucesso);
+        Assert.Equal([$"Pagamento em {status} não pode ser recusado."], resultado.Erros);
+        Assert.Equal(status, pagamento.Status);
+    }
 
-            var resultado = pagamento.Recusar();
+    [Theory]
+    [InlineData(StatusPagamento.Aprovado)]
+    [InlineData(StatusPagamento.Recusado)]
+    [InlineData(StatusPagamento.Falhou)]
+    public void MarcarFalha_ComPagamentoFinalizado_DeveRetornarResultadoFalhaEManterStatus(StatusPagamento status)
+    {
+        var pagamento = CriarPagamentoNoStatus(status);
 
-            Assert.False(resultado.Sucesso);
-            Assert.Equal([$"Pagamento em {status} não pode ser recusado."], resultado.Erros);
-            Assert.Equal(status, pagamento.Status);
-        }
+        var resultado = pagamento.MarcarFalha();
 
-        [Theory]
-        [InlineData(StatusPagamento.Aprovado)]
-        [InlineData(StatusPagamento.Recusado)]
-        [InlineData(StatusPagamento.Falhou)]
-        public void MarcarFalha_ComPagamentoFinalizado_DeveRetornarResultadoFalhaEManterStatus(StatusPagamento status)
-        {
-            var pagamento = CriarPagamentoNoStatus(status);
-
-            var resultado = pagamento.MarcarFalha();
-
-            Assert.False(resultado.Sucesso);
-            Assert.Equal([$"Pagamento em {status} não pode ser marcado como falho."], resultado.Erros);
-            Assert.Equal(status, pagamento.Status);
-        }
+        Assert.False(resultado.Sucesso);
+        Assert.Equal([$"Pagamento em {status} não pode ser marcado como falho."], resultado.Erros);
+        Assert.Equal(status, pagamento.Status);
     }
 }

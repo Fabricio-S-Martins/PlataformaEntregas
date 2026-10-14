@@ -1,13 +1,12 @@
-﻿namespace Modulos.Pedidos.Dominio.Enums
+﻿namespace Modulos.Pedidos.Dominio.Enums;
+
+public enum StatusPedido
 {
-    public enum StatusPedido
-    {
-        Criado,
-        Pago,
-        Aceito,
-        EmPreparo,
-        SaiuParaEntrega,
-        Entregue,
-        Cancelado
-    }
+    Criado,
+    Pago,
+    Aceito,
+    EmPreparo,
+    SaiuParaEntrega,
+    Entregue,
+    Cancelado
 }

@@ -5,35 +5,34 @@ using Modulos.Catalogo.Aplicacao.Repositorios;
 using Modulos.Catalogo.Dominio.Entidades;
 using System.Text.Json;
 
-namespace Modulos.Catalogo.Aplicacao.CasosDeUso.CadastrarRestaurante
+namespace Modulos.Catalogo.Aplicacao.CasosDeUso.CadastrarRestaurante;
+
+public class CadastrarRestauranteHandler : IRequestHandler<CadastrarRestauranteCommand>
 {
-    public class CadastrarRestauranteHandler : IRequestHandler<CadastrarRestauranteCommand>
+    private readonly IDistributedCache _distributedCache;
+    private readonly IRestauranteRepositorio _restauranteRepositorio;
+
+    public CadastrarRestauranteHandler(IDistributedCache distributedCache, IRestauranteRepositorio restauranteRepositorio)
     {
-        private readonly IDistributedCache _distributedCache;
-        private readonly IRestauranteRepositorio _restauranteRepositorio;
+        _distributedCache = distributedCache;
+        _restauranteRepositorio = restauranteRepositorio;
+    }
 
-        public CadastrarRestauranteHandler(IDistributedCache distributedCache, IRestauranteRepositorio restauranteRepositorio)
+    public async Task Handle(CadastrarRestauranteCommand request, CancellationToken cancellationToken)
+    {
+        var resultadoRestaurante = Restaurante.Criar(request.Nome, request.Cnpj);
+        if (!resultadoRestaurante.Sucesso)
+            throw new ArgumentException(string.Join(Environment.NewLine, resultadoRestaurante.Erros));
+
+        await _restauranteRepositorio.AdicionarAsync(resultadoRestaurante.Valor);
+
+        var restauranteSerealizado = JsonSerializer.Serialize(new RestauranteResponse(resultadoRestaurante.Valor.Id, resultadoRestaurante.Valor.Nome, resultadoRestaurante.Valor.Cnpj, resultadoRestaurante.Valor.Ativo));
+        var options = new DistributedCacheEntryOptions
         {
-            _distributedCache = distributedCache;
-            _restauranteRepositorio = restauranteRepositorio;
-        }
+            AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
+        };
 
-        public async Task Handle(CadastrarRestauranteCommand request, CancellationToken cancellationToken)
-        {
-            var resultadoRestaurante = Restaurante.Criar(request.Nome, request.Cnpj);
-            if (!resultadoRestaurante.Sucesso)
-                throw new ArgumentException(string.Join(Environment.NewLine, resultadoRestaurante.Erros));
-
-            await _restauranteRepositorio.AdicionarAsync(resultadoRestaurante.Valor);
-
-            var restauranteSerealizado = JsonSerializer.Serialize(new RestauranteResponse(resultadoRestaurante.Valor.Id, resultadoRestaurante.Valor.Nome, resultadoRestaurante.Valor.Cnpj, resultadoRestaurante.Valor.Ativo));
-            var options = new DistributedCacheEntryOptions
-            {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
-            };
-
-            var chaveCache = $"catalogo:restaurante:{resultadoRestaurante.Valor.Id}";
-            await _distributedCache.SetStringAsync(chaveCache, restauranteSerealizado, options, cancellationToken);
-        }
+        var chaveCache = $"catalogo:restaurante:{resultadoRestaurante.Valor.Id}";
+        await _distributedCache.SetStringAsync(chaveCache, restauranteSerealizado, options, cancellationToken);
     }
 }

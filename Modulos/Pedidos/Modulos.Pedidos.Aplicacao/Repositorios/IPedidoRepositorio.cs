@@ -1,11 +1,10 @@
 ﻿using Modulos.Pedidos.Dominio.Entidades;
 
-namespace Modulos.Pedidos.Aplicacao.Repositorios
+namespace Modulos.Pedidos.Aplicacao.Repositorios;
+
+public interface IPedidoRepositorio
 {
-    public interface IPedidoRepositorio
-    {
-        Task AdicionarAsync(Pedido pedido);
-        Task AtualizarAsync(Pedido pedido);
-        Task<Pedido> ObterPorIdAsync(Guid id);
-    }
+    Task AdicionarAsync(Pedido pedido);
+    Task AtualizarAsync(Pedido pedido);
+    Task<Pedido> ObterPorIdAsync(Guid id);
 }

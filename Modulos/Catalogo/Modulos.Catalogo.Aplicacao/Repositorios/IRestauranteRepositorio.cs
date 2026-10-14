@@ -1,10 +1,9 @@
 ﻿using Modulos.Catalogo.Dominio.Entidades;
 
-namespace Modulos.Catalogo.Aplicacao.Repositorios
+namespace Modulos.Catalogo.Aplicacao.Repositorios;
+
+public interface IRestauranteRepositorio
 {
-    public interface IRestauranteRepositorio
-    {
-        Task AdicionarAsync(Restaurante restaurante);
-        Task<Restaurante> ObterPorIdAsync(Guid id);
-    }
+    Task AdicionarAsync(Restaurante restaurante);
+    Task<Restaurante> ObterPorIdAsync(Guid id);
 }

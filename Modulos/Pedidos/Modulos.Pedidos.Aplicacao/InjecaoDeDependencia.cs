@@ -1,12 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Modulos.Pedidos.Aplicacao
+namespace Modulos.Pedidos.Aplicacao;
+
+public static class InjecaoDeDependencia
 {
-    public static class InjecaoDeDependencia
+    public static void RegistrarPedidosAplicacao(this IServiceCollection services)
     {
-        public static void RegistrarPedidosAplicacao(this IServiceCollection services)
-        {
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(InjecaoDeDependencia).Assembly));
-        }
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(InjecaoDeDependencia).Assembly));
     }
 }

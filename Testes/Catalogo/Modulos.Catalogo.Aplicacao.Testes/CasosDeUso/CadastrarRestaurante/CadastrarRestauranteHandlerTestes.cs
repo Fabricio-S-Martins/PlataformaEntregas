@@ -7,43 +7,42 @@ using Modulos.Catalogo.Dominio.Entidades;
 using Moq;
 using System.Globalization;
 
-namespace Modulos.Catalogo.Aplicacao.Testes.CasosDeUso.CadastrarRestaurante
+namespace Modulos.Catalogo.Aplicacao.Testes.CasosDeUso.CadastrarRestaurante;
+
+public class CadastrarRestauranteHandlerTestes
 {
-    public class CadastrarRestauranteHandlerTestes
+    private readonly Faker _faker;
+    private readonly Mock<IRestauranteRepositorio> _restauranteRepositorioMock;
+    private readonly Mock<IDistributedCache> _distributedCacheMock;
+
+    public CadastrarRestauranteHandlerTestes()
     {
-        private readonly Faker _faker;
-        private readonly Mock<IRestauranteRepositorio> _restauranteRepositorioMock;
-        private readonly Mock<IDistributedCache> _distributedCacheMock;
+        CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+        _faker = new Faker("pt_BR");
 
-        public CadastrarRestauranteHandlerTestes()
-        {
-            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
-            _faker = new Faker("pt_BR");
+        _restauranteRepositorioMock = new Mock<IRestauranteRepositorio>();
+        _distributedCacheMock = new Mock<IDistributedCache>();
+    }
 
-            _restauranteRepositorioMock = new Mock<IRestauranteRepositorio>();
-            _distributedCacheMock = new Mock<IDistributedCache>();
-        }
+    [Fact]
+    public async Task Handle_ComDadosValidos_DevePassarPeloAdicionarDoRepositorio()
+    {
+        var handler = new CadastrarRestauranteHandler(_distributedCacheMock.Object, _restauranteRepositorioMock.Object);
+        var command = new CadastrarRestauranteCommand(_faker.Company.CompanyName(), _faker.Company.Cnpj(false));
 
-        [Fact]
-        public async Task Handle_ComDadosValidos_DevePassarPeloAdicionarDoRepositorio()
-        {
-            var handler = new CadastrarRestauranteHandler(_distributedCacheMock.Object, _restauranteRepositorioMock.Object);
-            var command = new CadastrarRestauranteCommand(_faker.Company.CompanyName(), _faker.Company.Cnpj(false));
+        await handler.Handle(command, CancellationToken.None);
 
-            await handler.Handle(command, CancellationToken.None);
+        _restauranteRepositorioMock.Verify(r => r.AdicionarAsync(It.IsAny<Restaurante>()), Times.Once);
+    }
 
-            _restauranteRepositorioMock.Verify(r => r.AdicionarAsync(It.IsAny<Restaurante>()), Times.Once);
-        }
+    [Fact]
+    public async Task Handle_ComDadosInvalidos_DeveLancarExcecaoSemChamarOAdicionarDoRepositorio()
+    {
+        var handler = new CadastrarRestauranteHandler(_distributedCacheMock.Object, _restauranteRepositorioMock.Object);
+        var command = new CadastrarRestauranteCommand(string.Empty, string.Empty);
 
-        [Fact]
-        public async Task Handle_ComDadosInvalidos_DeveLancarExcecaoSemChamarOAdicionarDoRepositorio()
-        {
-            var handler = new CadastrarRestauranteHandler(_distributedCacheMock.Object, _restauranteRepositorioMock.Object);
-            var command = new CadastrarRestauranteCommand(string.Empty, string.Empty);
+        await Assert.ThrowsAsync<ArgumentException>(() => handler.Handle(command, CancellationToken.None));
 
-            await Assert.ThrowsAsync<ArgumentException>(() => handler.Handle(command, CancellationToken.None));
-
-            _restauranteRepositorioMock.Verify(r => r.AdicionarAsync(It.IsAny<Restaurante>()), Times.Never);
-        }
+        _restauranteRepositorioMock.Verify(r => r.AdicionarAsync(It.IsAny<Restaurante>()), Times.Never);
     }
 }

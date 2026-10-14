@@ -7,46 +7,45 @@ using Modulos.Autenticacao.Dominio.Enums;
 using Moq;
 using System.Globalization;
 
-namespace Modulos.Autenticacao.Aplicacao.Testes.CasosDeUso.CriarUsuario
+namespace Modulos.Autenticacao.Aplicacao.Testes.CasosDeUso.CriarUsuario;
+
+public class CriarUsuarioHandlerTestes
 {
-    public class CriarUsuarioHandlerTestes
+    private readonly Faker _faker;
+    private readonly Mock<IUsuarioRepositorio> _usuarioRepositorioMock;
+    private readonly Mock<ISenhaServico> _servicoSenhaMock;
+
+    public CriarUsuarioHandlerTestes()
     {
-        private readonly Faker _faker;
-        private readonly Mock<IUsuarioRepositorio> _usuarioRepositorioMock;
-        private readonly Mock<ISenhaServico> _servicoSenhaMock;
+        CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+        _faker = new Faker("pt_BR");
 
-        public CriarUsuarioHandlerTestes()
-        {
-            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
-            _faker = new Faker("pt_BR");
+        _usuarioRepositorioMock = new Mock<IUsuarioRepositorio>();
+        _servicoSenhaMock = new Mock<ISenhaServico>();
+        _servicoSenhaMock.Setup(s => s.GerarHash(It.IsAny<string>())).Returns(_faker.Random.Hash());
+    }
 
-            _usuarioRepositorioMock = new Mock<IUsuarioRepositorio>();
-            _servicoSenhaMock = new Mock<ISenhaServico>();
-            _servicoSenhaMock.Setup(s => s.GerarHash(It.IsAny<string>())).Returns(_faker.Random.Hash());
-        }
+    [Fact]
+    public async Task Handle_ComDadosValidos_DevePassarPeloAdicionarDoRepositorio()
+    {
+        var handler = new CriarUsuarioHandler(_usuarioRepositorioMock.Object, _servicoSenhaMock.Object);
+        var command = new CriarUsuarioCommand(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>().ToString());
 
-        [Fact]
-        public async Task Handle_ComDadosValidos_DevePassarPeloAdicionarDoRepositorio()
-        {
-            var handler = new CriarUsuarioHandler(_usuarioRepositorioMock.Object, _servicoSenhaMock.Object);
-            var command = new CriarUsuarioCommand(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>().ToString());
+        await handler.Handle(command, CancellationToken.None);
 
-            await handler.Handle(command, CancellationToken.None);
+        _usuarioRepositorioMock.Verify(r => r.AdicionarAsync(It.IsAny<Usuario>()), Times.Once);
+    }
 
-            _usuarioRepositorioMock.Verify(r => r.AdicionarAsync(It.IsAny<Usuario>()), Times.Once);
-        }
+    [Fact]
+    public async Task Handle_ComDadosValidos_DeveHashearSenha()
+    {
+        var handler = new CriarUsuarioHandler(_usuarioRepositorioMock.Object, _servicoSenhaMock.Object);
+        var command = new CriarUsuarioCommand(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>().ToString());
+        Usuario usuarioCapturado = null;
+        _usuarioRepositorioMock.Setup(r => r.AdicionarAsync(It.IsAny<Usuario>())).Callback<Usuario>(u => usuarioCapturado = u);
 
-        [Fact]
-        public async Task Handle_ComDadosValidos_DeveHashearSenha()
-        {
-            var handler = new CriarUsuarioHandler(_usuarioRepositorioMock.Object, _servicoSenhaMock.Object);
-            var command = new CriarUsuarioCommand(_faker.Person.FirstName, _faker.Person.Email, _faker.Internet.Password(), _faker.PickRandom<Papel>().ToString());
-            Usuario usuarioCapturado = null;
-            _usuarioRepositorioMock.Setup(r => r.AdicionarAsync(It.IsAny<Usuario>())).Callback<Usuario>(u => usuarioCapturado = u);
+        await handler.Handle(command, CancellationToken.None);
 
-            await handler.Handle(command, CancellationToken.None);
-
-            Assert.NotEqual(usuarioCapturado.SenhaHash, command.Senha);
-        }
+        Assert.NotEqual(usuarioCapturado.SenhaHash, command.Senha);
     }
 }

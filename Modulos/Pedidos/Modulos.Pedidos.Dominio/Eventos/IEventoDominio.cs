@@ -1,4 +1,3 @@
-﻿namespace Modulos.Pedidos.Dominio.Eventos
-{
-    public interface IEventoDominio;
-}
+﻿namespace Modulos.Pedidos.Dominio.Eventos;
+
+public interface IEventoDominio;

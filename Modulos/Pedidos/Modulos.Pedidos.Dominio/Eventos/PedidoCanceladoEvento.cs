@@ -1,4 +1,3 @@
-﻿namespace Modulos.Pedidos.Dominio.Eventos
-{
-    public record PedidoCanceladoEvento(Guid PedidoId) : IEventoDominio;
-}
+﻿namespace Modulos.Pedidos.Dominio.Eventos;
+
+public record PedidoCanceladoEvento(Guid PedidoId) : IEventoDominio;

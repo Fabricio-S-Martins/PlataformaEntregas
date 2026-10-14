@@ -8,25 +8,24 @@ using Modulos.Catalogo.Infraestrutura.Persistencia;
 using Modulos.Catalogo.Infraestrutura.Persistencia.Repositorios;
 using StackExchange.Redis;
 
-namespace Modulos.Catalogo.Infraestrutura
+namespace Modulos.Catalogo.Infraestrutura;
+
+public static class InjecaoDeDependencia
 {
-    public static class InjecaoDeDependencia
+    public static void RegistrarCatalogoInfraestrutura(this IServiceCollection services, IConfiguration configuration)
     {
-        public static void RegistrarCatalogoInfraestrutura(this IServiceCollection services, IConfiguration configuration)
+        services.AddDbContext<CatalogoDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("BasePlataformaEntregas")));
+
+        var connectionStringRedis = configuration.GetConnectionString("RedisPlataformaEntregas");
+        services.AddStackExchangeRedisCache(options =>
         {
-            services.AddDbContext<CatalogoDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("BasePlataformaEntregas")));
+            options.Configuration = connectionStringRedis;
+        });
+        ConnectionMultiplexer cm = ConnectionMultiplexer.Connect(connectionStringRedis);
+        services.AddSingleton<IConnectionMultiplexer>(cm);
 
-            var connectionStringRedis = configuration.GetConnectionString("RedisPlataformaEntregas");
-            services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = connectionStringRedis;
-            });
-            ConnectionMultiplexer cm = ConnectionMultiplexer.Connect(connectionStringRedis);
-            services.AddSingleton<IConnectionMultiplexer>(cm);
+        services.AddScoped<ITravaDistribuidaServico, TravaDistribuidaServico>();
 
-            services.AddScoped<ITravaDistribuidaServico, TravaDistribuidaServico>();
-
-            services.AddScoped<IRestauranteRepositorio, RestauranteRepositorio>();
-        }
+        services.AddScoped<IRestauranteRepositorio, RestauranteRepositorio>();
     }
 }

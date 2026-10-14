@@ -1,10 +1,9 @@
-﻿namespace Modulos.Pagamentos.Dominio.Enums
+﻿namespace Modulos.Pagamentos.Dominio.Enums;
+
+public enum StatusPagamento
 {
-    public enum StatusPagamento
-    {
-        Pendente, 
-        Aprovado, 
-        Recusado,
-        Falhou
-    }
+    Pendente, 
+    Aprovado, 
+    Recusado,
+    Falhou
 }

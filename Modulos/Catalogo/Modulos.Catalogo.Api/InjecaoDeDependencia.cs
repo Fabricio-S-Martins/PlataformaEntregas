@@ -3,14 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Modulos.Catalogo.Infraestrutura;
 using Modulos.Catalogo.Aplicacao;
 
-namespace Modulos.Catalogo.Api
+namespace Modulos.Catalogo.Api;
+
+public static class InjecaoDeDependencia
 {
-    public static class InjecaoDeDependencia
+    public static void RegistrarCatalogoApi(this IServiceCollection services, IConfiguration configuration)
     {
-        public static void RegistrarCatalogoApi(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.RegistrarCatalogoInfraestrutura(configuration);
-            services.RegistrarCatalogoAplicacao();
-        }
+        services.RegistrarCatalogoInfraestrutura(configuration);
+        services.RegistrarCatalogoAplicacao();
     }
 }
