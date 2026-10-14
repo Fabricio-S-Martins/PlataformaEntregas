@@ -1,5 +1,13 @@
 {
   "enabledPlugins": {
     "arquitetura-e-qualidade@arquitetura-e-qualidade": true
+  },
+  "extraKnownMarketplaces": {
+    "arquitetura-e-qualidade": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Fabricio-S-Martins/plugin-arquitetura-e-qualidade.git"
+      }
+    }
   }
 }
