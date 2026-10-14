@@ -4,7 +4,7 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-status, tarefa/bloqueado]
 
 # 09 — Confirmar o pagamento do Pedido ao receber a aprovação de Pagamentos, registrando em log quando o Pedido não puder ser pago
 
-**Módulo:** Pedidos | **Camada:** Aplicação | **Deps:** [[03-contratos-integracao|Compartilhado 03]], [[08-api-fechar-pedido|Pedidos 08]]
+**Módulo:** Pedidos | **Camada:** Aplicação | **Deps:** [Compartilhado 03](../../compartilhado/tarefas/03-contratos-integracao.md), [Pedidos 08](08-api-fechar-pedido.md)
 
 ## O que fazer
 

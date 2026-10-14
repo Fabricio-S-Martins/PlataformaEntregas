@@ -4,7 +4,7 @@ tags: [backlog, modulo/pagamentos, tarefa/bloqueado]
 
 # 04 — Criar o gateway de pagamento falso configurável com retry, circuit breaker e timeout do Polly e cobrir com testes automatizados
 
-**Módulo:** Pagamentos | **Camada:** Infraestrutura | **Deps:** Pagamentos 02, Pagamentos 03
+**Módulo:** Pagamentos | **Camada:** Infraestrutura | **Deps:** [Pagamentos 02](02-aplicacao-processar-pagamento.md), [Pagamentos 03](03-infraestrutura-persistencia-pagamento.md)
 
 ## O que fazer
 
