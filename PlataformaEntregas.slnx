@@ -23,8 +23,10 @@
     <Project Path="Modulos/Catalogo/Modulos.Catalogo.Infraestrutura/Modulos.Catalogo.Infraestrutura.csproj" Id="b63c3355-2bcc-4361-800b-be48cf764891" />
   </Folder>
   <Folder Name="/Modulos/Pagamentos/">
+    <Project Path="Modulos/Pagamentos/Modulos.Pagamentos.Api/Modulos.Pagamentos.Api.csproj" />
     <Project Path="Modulos/Pagamentos/Modulos.Pagamentos.Aplicacao/Modulos.Pagamentos.Aplicacao.csproj" />
     <Project Path="Modulos/Pagamentos/Modulos.Pagamentos.Dominio/Modulos.Pagamentos.Dominio.csproj" Id="e553fb9c-ea32-4763-9dd0-c5fa6671e934" />
+    <Project Path="Modulos/Pagamentos/Modulos.Pagamentos.Infraestrutura/Modulos.Pagamentos.Infraestrutura.csproj" />
   </Folder>
   <Folder Name="/Modulos/Pedidos/">
     <Project Path="Modulos/Pedidos/Modulos.Pedidos.Api/Modulos.Pedidos.Api.csproj" />

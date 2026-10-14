@@ -1,12 +1,11 @@
 ---
-tags: [backlog, modulo/pagamentos, tarefa/bloqueado]
+tags: [backlog, modulo/pagamentos, tarefa/pendente]
 ---
 
 # 04 — Criar o gateway de pagamento falso configurável com retry, circuit breaker e timeout do Polly e cobrir com testes automatizados
 
 - **Modulo:** Pagamentos
 - **Camada:** Infraestrutura
-- **Dependências:** [Pagamentos 03](03-infraestrutura-persistencia-pagamento.md)
 
 ## O que fazer
 
@@ -47,4 +46,7 @@ tags: [backlog, modulo/pagamentos, tarefa/bloqueado]
 - [ ] **d:** Testar falhas repetidas até abrir o circuito: a chamada seguinte lança `BrokenCircuitException` sem executar o sorteio.
 - [ ] **e:** Testar uma tentativa que passa de 2 s: `TimeoutRejectedException` é tratada como falha e aciona o retry.
 - [ ] **f:** Testar percentuais inválidos (soma diferente de 100, valor negativo ou acima de 100): a validação das opções falha.
-- [ ] **g:** Com o módulo rodando, chamar `fechar` várias vezes pelo `PlataformaEntregas.Api.http` e confirmar nos logs os avisos de retry e a abertura do circuito quando os percentuais estão em 0/0/100.
+- [ ] **g:** Aplicar a migration `InicialPagamento` no banco, com `Modulos.Pagamentos.Infraestrutura` como projeto alvo e `PlataformaEntregas.Api` como startup project, e confirmar que a tabela `Pagamentos` e o índice existem.
+- [ ] **h:** Inserir dois `Pagamento` `Aprovado` do mesmo `PedidoId`, por SQL, e confirmar que o segundo falha.
+- [ ] **i:** Inserir um `Recusado` e um `Falhou` do mesmo `PedidoId` e confirmar que ambos passam.
+- [ ] **j:** Com o módulo rodando, chamar `fechar` várias vezes pelo `PlataformaEntregas.Api.http` e confirmar nos logs os avisos de retry e a abertura do circuito quando os percentuais estão em 0/0/100.

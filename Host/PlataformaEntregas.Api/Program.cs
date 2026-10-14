@@ -1,6 +1,7 @@
 using Microsoft.OpenApi;
 using Modulos.Autenticacao.Api;
 using Modulos.Catalogo.Api;
+using Modulos.Pagamentos.Api;
 using Modulos.Pedidos.Api;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.RegistrarAutenticacaoApi(builder.Configuration);
 builder.Services.RegistrarCatalogoApi(builder.Configuration);
 builder.Services.RegistrarPedidosApi(builder.Configuration);
+builder.Services.RegistrarPagamentosApi(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options =>
