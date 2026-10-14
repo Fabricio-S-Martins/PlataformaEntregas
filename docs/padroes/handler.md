@@ -1,24 +1,34 @@
 # Handler
 
-**Modelo base:** o alvo pode ter particularidades. | **Origem:** AceitarHandler, AdicionarItemHandler, CriarPedidoHandler, CriarUsuarioHandler, CadastrarRestauranteHandler
-
 ## Esqueleto
 ```csharp
-class <Caso>Handler : IRequestHandler<<Caso>Command[, <Tipo>]> {
-  private readonly I<Repositorio> _repositorio;   // + demais deps
-  ctor(deps) { atribui campos }
+namespace Modulos.<Modulo>.Aplicacao.CasosDeUso.<Caso>;
 
-  async Task[<Tipo>] Handle(<Caso>Command request, CancellationToken ct) {
-    var <entidade> = await _repositorio.ObterPorIdAsync(...);   // (se houver)
-    if (<entidade> == null) throw ...;                          // (se houver)
-    var resultado = <Entidade>.<Metodo>(...);                   // Criar ou transição
-    if (!resultado.Sucesso) throw new ArgumentException(...);
-    await _repositorio.AdicionarAsync | AtualizarAsync(...);
-    await DespachanteDeEventosDominio.DespacharAsync(...);      // (se houver)
-    return ...;                                                 // (se houver)
-  }
+public class <Caso>Handler : IRequestHandler<<Caso>Command>
+{
+    private readonly I<E>Repositorio _<e>Repositorio;
+    private readonly IPublisher _publisher;
+    public <Caso>Handler(I<E>Repositorio <e>Repositorio, IPublisher publisher)
+    {
+        _<e>Repositorio = <e>Repositorio;
+        _publisher = publisher;
+    }
+
+    public async Task Handle(<Caso>Command request, CancellationToken cancellationToken)
+    {
+        var <e> = await _<e>Repositorio.ObterPorIdAsync(request.<E>Id);
+        if (<e> == null)
+            throw new InvalidOperationException("<E> não encontrado.");
+
+        var resultado<E> = <e>.<Metodo>();
+        if (!resultado<E>.Sucesso)
+            throw new ArgumentException(string.Join(Environment.NewLine, resultado<E>.Erros));
+
+        await _<e>Repositorio.AtualizarAsync(<e>);
+        await DespachanteDeEventosDominio.DespacharAsync(<e>.Eventos, _publisher, cancellationToken);
+    }
 }
 ```
-
-## Variações
-- **CadastrarRestauranteHandler:** grava no `IDistributedCache` após persistir.
+- Entidade, método de domínio e dependências do construtor variam; dependência extra (cache, serviço, logger) vira campo e parâmetro.
+- Criar: sem `ObterPorIdAsync` nem checagem de nulo; a entidade vem de `<E>.Criar(...)` e é gravada com `AdicionarAsync`. Com retorno: `IRequestHandler<<Caso>Command, Guid>`, `Task<Guid>` e `return resultado<E>.Valor.Id;`.
+- Evento de integração: `INotificationHandler<<Evento>Integracao>`, sem retorno.
