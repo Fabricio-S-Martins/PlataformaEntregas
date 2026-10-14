@@ -4,7 +4,8 @@ tags: [backlog, modulo/pagamentos, tarefa/pendente]
 
 # 03 — Persistir o Pagamento no Postgres, registrar o módulo no host e gerar a Migration inicial
 
-**Módulo:** Pagamentos | **Camada:** Infraestrutura / API | **Deps:** [Pagamentos 02](02-aplicacao-processar-pagamento.md)
+- **Modulo:** Pagamentos
+- **Camada:** Infraestrutura / API
 
 ## O que fazer
 

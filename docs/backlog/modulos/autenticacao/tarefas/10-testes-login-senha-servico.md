@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
 
 # 10 — Cobrir login e hash de senha com testes automatizados
 
-**Módulo:** Autenticação
-**Camada:** Aplicação
+- **Modulo:** Autenticação
+- **Camada:** Aplicação
 
 ## Contexto
 

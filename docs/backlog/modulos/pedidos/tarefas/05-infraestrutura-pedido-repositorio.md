@@ -4,8 +4,8 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, tarefa/concluido]
 
 # 05 — Implementar IPedidoRepositorio com EF Core
 
-**Módulo:** Pedidos
-**Camada:** Infraestrutura
+- **Modulo:** Pedidos
+- **Camada:** Infraestrutura
 
 ## Contexto
 

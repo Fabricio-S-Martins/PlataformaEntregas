@@ -4,7 +4,8 @@ tags: [backlog, modulo/pagamentos, tarefa/concluido]
 
 # 02 — Processar o pagamento ao receber o Pedido fechado, publicar a aprovação e cobrir com testes automatizados
 
-**Módulo:** Pagamentos | **Camada:** Aplicação | **Deps:** [Compartilhado 03](../../compartilhado/tarefas/03-contratos-integracao.md), [Pagamentos 01](01-dominio-pagamento.md)
+- **Modulo:** Pagamentos
+- **Camada:** Aplicação
 
 ## O que fazer
 

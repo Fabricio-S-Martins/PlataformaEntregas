@@ -4,7 +4,9 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, camada/api, tarefa/bloque
 
 # 08 — Expor o fechamento do Pedido publicando o contrato de integração e exigir autenticação no confirmar-pagamento
 
-**Módulo:** Pedidos | **Camada:** Aplicação / Infraestrutura / API | **Deps:** [Compartilhado 03](../../compartilhado/tarefas/03-contratos-integracao.md), [Pedidos 07](07-dominio-fechar-pedido.md)
+- **Modulo:** Pedidos
+- **Camada:** Aplicação / Infraestrutura / API
+- **Dependências:** [Pedidos 07](07-dominio-fechar-pedido.md)
 
 ## O que fazer
 

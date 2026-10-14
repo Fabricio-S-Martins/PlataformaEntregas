@@ -4,8 +4,8 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, fluxo/pedido-status, tare
 
 # 03 — Criar casos de uso do Pedido e publicar os eventos de domínio
 
-**Módulo:** Pedidos
-**Camada:** Aplicação
+- **Modulo:** Pedidos
+- **Camada:** Aplicação
 
 ## Contexto
 

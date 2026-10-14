@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
 
 # 08 — Criar fluxo de login com JWT e extrair serviço de hash de senha
 
-**Módulo:** Autenticação
-**Camada:** Aplicação, Infraestrutura, API
+- **Modulo:** Autenticação
+- **Camada:** Aplicação, Infraestrutura, API
 
 ## Contexto
 

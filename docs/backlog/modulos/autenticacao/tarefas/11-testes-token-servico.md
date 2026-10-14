@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
 
 # 11 — Cobrir geração e validação do token JWT com testes automatizados
 
-**Módulo:** Autenticação
-**Camada:** Infraestrutura
+- **Modulo:** Autenticação
+- **Camada:** Infraestrutura
 
 ## Contexto
 

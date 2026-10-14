@@ -4,8 +4,8 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-consulta-restaurante, tarefa/con
 
 # 08 — Cache de leitura do Restaurante com Redis (cache-aside + write-through)
 
-**Módulo:** Catálogo
-**Camada:** Infraestrutura / Aplicação / API (fatia vertical)
+- **Modulo:** Catálogo
+- **Camada:** Infraestrutura / Aplicação / API (fatia vertical)
 
 ## Contexto
 

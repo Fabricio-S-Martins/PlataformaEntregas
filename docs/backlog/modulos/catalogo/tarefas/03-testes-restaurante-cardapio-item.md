@@ -4,8 +4,8 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, fluxo/cata
 
 # 03 — Cobrir Restaurante, Cardapio e ItemCardapio com testes automatizados
 
-**Módulo:** Catálogo
-**Camada:** Domínio
+- **Modulo:** Catálogo
+- **Camada:** Domínio
 
 ## Contexto
 

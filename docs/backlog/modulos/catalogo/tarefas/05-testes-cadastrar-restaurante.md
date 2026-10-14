@@ -4,8 +4,8 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, tarefa/con
 
 # 05 — Cobrir caso de uso de cadastro de Restaurante com testes automatizados
 
-**Módulo:** Catálogo
-**Camada:** Aplicação
+- **Modulo:** Catálogo
+- **Camada:** Aplicação
 
 ## Contexto
 

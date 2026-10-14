@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/conclui
 
 # 07 — API: endpoint de cadastro de usuário com Minimal API
 
-**Módulo:** Autenticação
-**Camada:** API
+- **Modulo:** Autenticação
+- **Camada:** API
 
 ## Contexto
 

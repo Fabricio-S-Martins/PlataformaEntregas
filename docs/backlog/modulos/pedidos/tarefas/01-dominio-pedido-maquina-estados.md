@@ -4,8 +4,8 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-status, tarefa/concluido]
 
 # 01 — Modelar o agregado Pedido com máquina de estados e eventos de domínio
 
-**Módulo:** Pedidos
-**Camada:** Domínio
+- **Modulo:** Pedidos
+- **Camada:** Domínio
 
 ## Contexto
 

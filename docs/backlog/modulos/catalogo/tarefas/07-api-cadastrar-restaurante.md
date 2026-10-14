@@ -4,8 +4,8 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, tarefa/con
 
 # 07 — Expor endpoint de cadastro de Restaurante e gerar a Migration inicial do Catálogo
 
-**Módulo:** Catálogo
-**Camada:** API / Infraestrutura
+- **Modulo:** Catálogo
+- **Camada:** API / Infraestrutura
 
 ## Contexto
 

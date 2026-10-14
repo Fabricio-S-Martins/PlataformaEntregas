@@ -4,8 +4,8 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, tarefa/concluido]
 
 # 06 — Expor endpoints do ciclo de vida do Pedido
 
-**Módulo:** Pedidos
-**Camada:** API
+- **Modulo:** Pedidos
+- **Camada:** API
 
 ## Contexto
 

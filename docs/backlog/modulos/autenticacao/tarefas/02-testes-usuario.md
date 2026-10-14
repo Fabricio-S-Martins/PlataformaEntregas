@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/conclui
 
 # 02 — Domínio: testes unitários da entidade Usuario
 
-**Módulo:** Autenticação
-**Camada:** Domínio
+- **Modulo:** Autenticação
+- **Camada:** Domínio
 
 ## Contexto
 

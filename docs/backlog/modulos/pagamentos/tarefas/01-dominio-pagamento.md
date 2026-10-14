@@ -4,7 +4,8 @@ tags: [backlog, modulo/pagamentos, tarefa/concluido]
 
 # 01 — Modelar o agregado Pagamento com status e transições no Domínio e cobrir com testes automatizados
 
-**Módulo:** Pagamentos | **Camada:** Domínio | **Deps:** —
+- **Modulo:** Pagamentos
+- **Camada:** Domínio
 
 ## O que fazer
 

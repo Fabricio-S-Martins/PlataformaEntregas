@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/conclui
 
 # 03 — Aplicação: caso de uso Criar Usuário
 
-**Módulo:** Autenticação
-**Camada:** Aplicação
+- **Modulo:** Autenticação
+- **Camada:** Aplicação
 
 ## Contexto
 

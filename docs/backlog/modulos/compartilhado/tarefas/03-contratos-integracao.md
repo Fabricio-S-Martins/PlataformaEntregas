@@ -4,7 +4,8 @@ tags: [backlog, modulo/compartilhado, tarefa/concluido]
 
 # 03 — Criar o projeto de contratos de integração entre módulos com os eventos de pedido fechado e pagamento aprovado
 
-**Módulo:** Compartilhado | **Camada:** Compartilhado | **Deps:** —
+- **Modulo:** Compartilhado
+- **Camada:** Compartilhado
 
 ## O que fazer
 

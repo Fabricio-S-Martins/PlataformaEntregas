@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, tarefa/concluido]
 
 # 09 — Validar JWT no pipeline e expor endpoint de usuário autenticado
 
-**Módulo:** Autenticação
-**Camada:** API
+- **Modulo:** Autenticação
+- **Camada:** API
 
 ## Contexto
 

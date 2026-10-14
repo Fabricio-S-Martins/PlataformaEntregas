@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, tarefa/concluido]
 
 # XX — Infraestrutura: fábrica de design-time e primeira Migration
 
-**Módulo:** Autenticação
-**Camada:** Infraestrutura
+- **Modulo:** Autenticação
+- **Camada:** Infraestrutura
 **Resolvida:** task 07
 
 ## Contexto

@@ -4,7 +4,8 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, tarefa/pendente]
 
 # 07 — Fechar o Pedido com total calculado, permitindo nova tentativa e bloqueando novos itens
 
-**Módulo:** Pedidos | **Camada:** Domínio | **Deps:** —
+- **Modulo:** Pedidos
+- **Camada:** Domínio
 
 ## O que fazer
 

@@ -4,8 +4,8 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-status, tarefa/concluido]
 
 # 02 — Cobrir Pedido e ItemPedido com testes automatizados
 
-**Módulo:** Pedidos
-**Camada:** Domínio
+- **Modulo:** Pedidos
+- **Camada:** Domínio
 
 ## Contexto
 

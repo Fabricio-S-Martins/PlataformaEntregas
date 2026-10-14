@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, tarefa/concluido]
 
 # 05 — Infraestrutura: subir PostgreSQL via Docker Compose
 
-**Módulo:** Autenticação
-**Camada:** Infraestrutura (ambiente)
+- **Modulo:** Autenticação
+- **Camada:** Infraestrutura (ambiente)
 
 ## Contexto
 

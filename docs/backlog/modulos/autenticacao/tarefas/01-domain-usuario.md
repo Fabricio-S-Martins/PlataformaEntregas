@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/conclui
 
 # 01 — Domínio: entidade Usuario
 
-**Módulo:** Autenticação
-**Camada:** Domínio
+- **Modulo:** Autenticação
+- **Camada:** Domínio
 
 ## Contexto
 

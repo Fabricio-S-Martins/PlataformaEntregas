@@ -4,8 +4,8 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-montagem-cardapio, tarefa/conclu
 
 # 02 — Modelar Cardapio e ItemCardapio no Domínio
 
-**Módulo:** Catálogo
-**Camada:** Domínio
+- **Modulo:** Catálogo
+- **Camada:** Domínio
 
 ## Contexto
 

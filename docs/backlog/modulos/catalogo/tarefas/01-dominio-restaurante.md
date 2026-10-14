@@ -4,8 +4,8 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, tarefa/con
 
 # 01 — Modelar a entidade Restaurante no Domínio
 
-**Módulo:** Catálogo
-**Camada:** Domínio
+- **Modulo:** Catálogo
+- **Camada:** Domínio
 
 ## Contexto
 

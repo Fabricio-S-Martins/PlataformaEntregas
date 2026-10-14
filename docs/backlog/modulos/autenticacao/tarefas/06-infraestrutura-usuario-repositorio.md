@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/conclui
 
 # 06 — Infraestrutura: implementação real do IUsuarioRepositorio com EF Core
 
-**Módulo:** Autenticação
-**Camada:** Infraestrutura
+- **Modulo:** Autenticação
+- **Camada:** Infraestrutura
 
 ## Contexto
 

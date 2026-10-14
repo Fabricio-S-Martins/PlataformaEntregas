@@ -4,8 +4,8 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, tarefa/con
 
 # 04 — Criar caso de uso de cadastro de Restaurante
 
-**Módulo:** Catálogo
-**Camada:** Aplicação
+- **Modulo:** Catálogo
+- **Camada:** Aplicação
 
 ## Contexto
 

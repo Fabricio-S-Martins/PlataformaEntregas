@@ -4,8 +4,8 @@ tags: [backlog, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/conclui
 
 # 12 — Adotar Result Pattern nas invariantes do Usuario
 
-**Módulo:** Autenticação
-**Camada:** Domínio, Aplicação
+- **Modulo:** Autenticação
+- **Camada:** Domínio, Aplicação
 
 ## Contexto
 

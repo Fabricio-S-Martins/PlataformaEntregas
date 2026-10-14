@@ -4,8 +4,8 @@ tags: [backlog, modulo/compartilhado, tarefa/concluido]
 
 # 01 — Extrair Resultado&lt;T&gt; para um Shared Kernel entre módulos
 
-**Módulo:** Compartilhado
-**Camada:** Domínio
+- **Modulo:** Compartilhado
+- **Camada:** Domínio
 
 ## Contexto
 

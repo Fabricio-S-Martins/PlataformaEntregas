@@ -4,8 +4,8 @@ tags: [backlog, modulo/pedidos, fluxo/pedido-operacao, fluxo/pedido-status, tare
 
 # 04 — Cobrir os casos de uso do Pedido com testes automatizados
 
-**Módulo:** Pedidos
-**Camada:** Aplicação
+- **Modulo:** Pedidos
+- **Camada:** Aplicação
 
 ## Contexto
 

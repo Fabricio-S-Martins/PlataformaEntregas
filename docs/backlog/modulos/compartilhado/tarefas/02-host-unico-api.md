@@ -4,8 +4,8 @@ tags: [backlog, modulo/compartilhado, tarefa/concluido]
 
 # 02 — Criar host único da API e converter Modulos.Autenticacao.Api em biblioteca
 
-**Módulo:** Compartilhado / Autenticação
-**Camada:** API
+- **Modulo:** Compartilhado / Autenticação
+- **Camada:** API
 
 ## Contexto
 

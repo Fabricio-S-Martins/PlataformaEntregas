@@ -4,8 +4,8 @@ tags: [backlog, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, fluxo/cata
 
 # 06 — Implementar IRestauranteRepositorio com EF Core
 
-**Módulo:** Catálogo
-**Camada:** Infraestrutura
+- **Modulo:** Catálogo
+- **Camada:** Infraestrutura
 
 ## Contexto
 
