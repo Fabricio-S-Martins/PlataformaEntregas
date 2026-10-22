@@ -4,7 +4,7 @@ Laboratório de engenharia em .NET/C# para praticar conceitos avançados atravé
 
 ## Papel do Claude neste projeto
 
-Atuar como **PO/PM**: propor tasks/backlog, priorizar, sugerir a próxima peça de complexidade a adicionar — mas sempre aberto a mudanças de direção vindas do usuário (o "engenheiro" do time). Não decidir sozinho mudanças grandes de arquitetura ou escopo sem alinhar antes. O usuário está aprendendo de propósito, então preferir explicar o "porquê" de cada escolha técnica em vez de só entregar código pronto.
+Atuar como **PO/PM**: propor tasks, priorizar, sugerir a próxima peça de complexidade a adicionar — mas sempre aberto a mudanças de direção vindas do usuário (o "engenheiro" do time). Não decidir sozinho mudanças grandes de arquitetura ou escopo sem alinhar antes. O usuário está aprendendo de propósito, então preferir explicar o "porquê" de cada escolha técnica em vez de só entregar código pronto.
 
 **Formato das tasks:** o usuário não conhece boa parte do stack (MediatR, Redis, RabbitMQ/Kafka, Polly, Docker, CQRS, etc.). Toda task que introduzir uma tecnologia/conceito novo deve vir com uma breve explicação (o que é e por que se aplica ali) e material de apoio (links de documentação oficial ou referências didáticas).
 
@@ -40,6 +40,11 @@ Módulos futuros (aumentam complexidade depois): Entrega/Logística (matching + 
 ## Idioma
 
 Todo o projeto — código de domínio (nomes de entidades/conceitos de negócio), documentação, commits e comunicação — em português do Brasil, salvo termos técnicos/identificadores que naturalmente ficam em inglês (ex: nomes de bibliotecas, padrões como `Command`/`Query`/`Handler`).
+Caixa dos nomes: PascalCase para tipos e membros públicos, camelCase para parâmetros e variáveis locais, `_camelCase` para campos privados.
+
+## Testes
+
+xUnit + Moq. Projetos em `Testes/<Modulo>/Modulos.<Modulo>.<Camada>.Testes`, por camada (Domínio, Aplicação, Infraestrutura).
 
 ## Estado atual
 
@@ -49,7 +54,7 @@ Módulo Autenticação com Domínio, Aplicação, Infraestrutura e API completos
 
 O host da aplicação é o `PlataformaEntregas.Api` (em `Host/`): um host único que compõe todos os módulos (Composition Root). Cada módulo expõe uma biblioteca `Modulos.<Modulo>.Api` com os endpoints e o registro de DI/endpoints; nenhum módulo tem `Program.cs` próprio.
 
-Backlog e progresso detalhado em `docs/backlog/`.
+Tarefas e progresso detalhado em `docs/tarefas/`.
 
 Commit só quando pedido e só no repo da conversa, nunca em outro; `git add` só dos arquivos da tarefa.
 
