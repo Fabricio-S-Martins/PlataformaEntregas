@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pedidos, fluxo/pedido-operacao, tarefa/pendente]
+tags: [tarefas, modulo/pedidos, fluxo/pedido-operacao, tarefa/pendente]
 ---
 
 # 07 — Fechar o Pedido com total calculado, permitindo nova tentativa e bloqueando novos itens

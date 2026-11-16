@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pedidos, fluxo/pedido-operacao, tarefa/concluido]
+tags: [tarefas, modulo/pedidos, fluxo/pedido-operacao, tarefa/concluido]
 ---
 
 # 06 — Expor endpoints do ciclo de vida do Pedido

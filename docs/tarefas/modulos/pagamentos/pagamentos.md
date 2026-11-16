@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pagamentos]
+tags: [tarefas, modulo/pagamentos]
 ---
 
 # Módulo Pagamentos

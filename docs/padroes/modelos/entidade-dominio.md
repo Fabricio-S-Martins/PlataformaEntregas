@@ -1,3 +1,7 @@
+---
+tags: [padrao, camada/dominio]
+---
+
 # Entidade de domínio
 
 ## Esqueleto

@@ -1,3 +1,7 @@
+---
+tags: [padrao]
+---
+
 # Práticas adotadas
 
 Regras de código do projeto; sem marca é obrigatória, `(preferível)` é recomendada.

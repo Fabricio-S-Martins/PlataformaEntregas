@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/concluido]
+tags: [tarefas, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/concluido]
 ---
 
 # 07 — API: endpoint de cadastro de usuário com Minimal API

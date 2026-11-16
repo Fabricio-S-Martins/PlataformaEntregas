@@ -1,5 +1,5 @@
 ---
-tags: [tarefa]
+tags: [tarefas]
 ---
 
 # Tarefas

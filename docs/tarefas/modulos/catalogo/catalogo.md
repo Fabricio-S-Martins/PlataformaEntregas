@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/catalogo]
+tags: [tarefas, modulo/catalogo]
 ---
 
 # Módulo Catálogo

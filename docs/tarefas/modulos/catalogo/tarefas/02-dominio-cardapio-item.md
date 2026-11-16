@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/catalogo, fluxo/catalogo-montagem-cardapio, tarefa/concluido]
+tags: [tarefas, modulo/catalogo, fluxo/catalogo-montagem-cardapio, tarefa/concluido]
 ---
 
 # 02 — Modelar Cardapio e ItemCardapio no Domínio

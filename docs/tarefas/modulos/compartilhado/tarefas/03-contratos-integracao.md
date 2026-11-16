@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/compartilhado, tarefa/concluido]
+tags: [tarefas, modulo/compartilhado, tarefa/concluido]
 ---
 
 # 03 — Criar o projeto de contratos de integração entre módulos com os eventos de pedido fechado e pagamento aprovado

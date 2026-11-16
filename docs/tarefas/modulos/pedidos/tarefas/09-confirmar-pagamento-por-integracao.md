@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pedidos, fluxo/pedido-status, tarefa/bloqueado]
+tags: [tarefas, modulo/pedidos, fluxo/pedido-status, tarefa/bloqueado]
 ---
 
 # 09 — Confirmar o pagamento do Pedido ao receber a aprovação de Pagamentos, registrando em log quando o Pedido não puder ser pago

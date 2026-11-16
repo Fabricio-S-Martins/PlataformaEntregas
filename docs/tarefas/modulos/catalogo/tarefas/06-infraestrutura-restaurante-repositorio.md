@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, fluxo/catalogo-consulta-restaurante, tarefa/concluido]
+tags: [tarefas, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, fluxo/catalogo-consulta-restaurante, tarefa/concluido]
 ---
 
 # 06 — Implementar IRestauranteRepositorio com EF Core

@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pedidos, fluxo/pedido-operacao, fluxo/pedido-status, tarefa/concluido]
+tags: [tarefas, modulo/pedidos, fluxo/pedido-operacao, fluxo/pedido-status, tarefa/concluido]
 ---
 
 # 03 — Criar casos de uso do Pedido e publicar os eventos de domínio

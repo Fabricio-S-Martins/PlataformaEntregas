@@ -58,5 +58,9 @@ Tarefas e progresso detalhado em `docs/tarefas/`.
 
 Commit só quando pedido e só no repo da conversa, nunca em outro; `git add` só dos arquivos da tarefa.
 
-Executar tarefa/card → usar a skill executar-tarefa.
+Executar tarefa → usar a skill executar-tarefa.
+Build: `dotnet build PlataformaEntregas.slnx`.
+Achado de desvio do padrão fora do escopo da tarefa, ou pedido do Dev para registrar, consultar ou triar pontos em aberto: ler antes `docs/instrucoes/PONTOS-EM-ABERTO.md` do plugin arquitetura-e-qualidade; nunca corrigir nem ignorar. Ao tocar um módulo: Grep `tags:.*excecao-aceita` em `docs/` e ler só as linhas com `modulo/<m>`; exceção aceita não se corrige nem se aponta.
 Ambiente `Production` (`ASPNETCORE_ENVIRONMENT`, `DOTNET_ENVIRONMENT`, `--environment`): nunca usar nem como contorno de bloqueio (ex: validação de DI) sem perguntar antes, listando as opções de forma clara e objetiva.
+
+Fora da árvore de docs (fica como está, não conferir): runbooks, sessoes.

@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pedidos, fluxo/pedido-status, tarefa/concluido]
+tags: [tarefas, modulo/pedidos, fluxo/pedido-status, tarefa/concluido]
 ---
 
 # 02 — Cobrir Pedido e ItemPedido com testes automatizados

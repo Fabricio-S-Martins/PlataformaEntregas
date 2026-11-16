@@ -15,15 +15,14 @@ tags: [especificacao, modulo/catalogo, especificacao/rascunho]
 
 ## Regras
 - **Nome do restaurante obrigatório:** o nome não pode ficar em branco.
-- **CNPJ com 14 dígitos:** o CNPJ tem exatamente 14 dígitos numéricos.
+- **CNPJ válido:** o CNPJ tem 14 dígitos numéricos e dígitos verificadores corretos.
+- **CNPJ único:** não existem dois restaurantes com o mesmo CNPJ.
 - **Restaurante nasce ativo:** todo restaurante cadastrado começa ativo.
-- **Cardápio de um restaurante:** cada cardápio pertence a um restaurante.
+- **Restaurante do usuário Restaurante:** só quem tem o papel Restaurante cadastra um restaurante, e ele fica ligado a esse usuário.
+- **Desativar restaurante:** o usuário a quem o restaurante pertence pode desativá-lo. Restaurante inativo não recebe novos pedidos e seus itens não podem ser pedidos; pedidos em andamento seguem normalmente.
+- **Cardápio de um restaurante:** cada cardápio pertence a um restaurante que existe, e cada restaurante tem um só cardápio.
 - **Item completo:** todo item tem nome e descrição obrigatórios.
-- **Preço não negativo:** o preço do item não pode ser negativo.
+- **Nome único no cardápio:** não existem dois itens com o mesmo nome no mesmo cardápio.
+- **Preço maior que zero:** o preço do item é maior que zero.
 - **Item nasce disponível:** todo item adicionado começa disponível.
-
-## Aguardando Validações
-- Validação 1: o CNPJ precisa ter dígitos verificadores válidos, ou basta ter 14 dígitos?
-- Validação 2: dois restaurantes podem ter o mesmo CNPJ?
-- Validação 3: um restaurante pode ser desativado, e o que acontece com os itens e os pedidos dele?
-- Validação 4: o preço do item pode ser zero?
+- **Item mantido pelo dono:** só o usuário a quem o restaurante pertence edita, remove ou marca como indisponível um item dele.

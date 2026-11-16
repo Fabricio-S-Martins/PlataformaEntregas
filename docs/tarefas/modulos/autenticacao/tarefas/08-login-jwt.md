@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
+tags: [tarefas, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
 ---
 
 # 08 — Criar fluxo de login com JWT e extrair serviço de hash de senha

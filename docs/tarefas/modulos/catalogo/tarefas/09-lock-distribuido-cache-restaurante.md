@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/catalogo, fluxo/catalogo-consulta-restaurante, tarefa/concluido]
+tags: [tarefas, modulo/catalogo, fluxo/catalogo-consulta-restaurante, tarefa/concluido]
 ---
 
 # 09 — Proteger o cache do Restaurante contra cache stampede com lock distribuído no Redis

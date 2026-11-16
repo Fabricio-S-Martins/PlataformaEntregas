@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pagamentos, tarefa/concluido]
+tags: [tarefas, modulo/pagamentos, tarefa/concluido]
 ---
 
 # 03 — Persistir o Pagamento no Postgres, registrar o módulo no host e gerar a Migration inicial

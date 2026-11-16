@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/concluido]
+tags: [tarefas, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/concluido]
 ---
 
 # 02 — Domínio: testes unitários da entidade Usuario

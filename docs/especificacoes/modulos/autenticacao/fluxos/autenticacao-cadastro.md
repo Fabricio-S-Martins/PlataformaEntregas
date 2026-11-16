@@ -16,6 +16,7 @@ tags: [especificacao, modulo/autenticacao, fluxo/autenticacao-cadastro, especifi
 - **Todos os erros juntos:** com mais de um erro, as mensagens vêm juntas, separadas por quebra de linha.
 - **Recusa não cria usuário:** um cadastro recusado não grava nada.
 - **Login depois:** o cadastro não loga a pessoa; ela entra pelo fluxo de login.
+- **Aprovação depois:** Restaurante e Entregador nascem aguardando aprovação, como descrito em [Aprovação de Restaurante e Entregador](autenticacao-aprovacao.md); o e-mail não precisa de confirmação.
 
 ## Critérios de aceite
 | Critério | Quando | Então |
@@ -33,6 +34,4 @@ tags: [especificacao, modulo/autenticacao, fluxo/autenticacao-cadastro, especifi
 
 ## Fora do escopo
 - Mais de um papel para o mesmo e-mail.
-
-## Aguardando Validações
-- Validação 1: Restaurante e Entregador precisam de aprovação, ou o e-mail precisa de confirmação, antes de usar o sistema? Hoje o cadastro concluído já permite login.
+- Confirmação de e-mail.

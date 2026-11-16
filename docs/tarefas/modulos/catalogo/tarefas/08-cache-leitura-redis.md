@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/catalogo, fluxo/catalogo-consulta-restaurante, tarefa/concluido]
+tags: [tarefas, modulo/catalogo, fluxo/catalogo-consulta-restaurante, tarefa/concluido]
 ---
 
 # 08 — Cache de leitura do Restaurante com Redis (cache-aside + write-through)

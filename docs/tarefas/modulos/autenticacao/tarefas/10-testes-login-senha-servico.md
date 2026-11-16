@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
+tags: [tarefas, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
 ---
 
 # 10 — Cobrir login e hash de senha com testes automatizados

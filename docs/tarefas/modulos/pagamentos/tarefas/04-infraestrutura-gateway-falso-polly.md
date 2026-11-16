@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pagamentos, tarefa/em-andamento]
+tags: [tarefas, modulo/pagamentos, tarefa/em-andamento]
 ---
 
 # 04 — Criar o gateway de pagamento falso com retry, circuit breaker e timeout do Polly e cobrir com testes automatizados

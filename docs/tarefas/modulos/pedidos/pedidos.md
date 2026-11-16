@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pedidos]
+tags: [tarefas, modulo/pedidos]
 ---
 
 # Módulo Pedidos

@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/concluido]
+tags: [tarefas, modulo/autenticacao, fluxo/autenticacao-cadastro, tarefa/concluido]
 ---
 
 # 12 — Adotar Result Pattern nas invariantes do Usuario

@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pedidos, fluxo/pedido-operacao, fluxo/pedido-status, tarefa/concluido]
+tags: [tarefas, modulo/pedidos, fluxo/pedido-operacao, fluxo/pedido-status, tarefa/concluido]
 ---
 
 # 04 — Cobrir os casos de uso do Pedido com testes automatizados

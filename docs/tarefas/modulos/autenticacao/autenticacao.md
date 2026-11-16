@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/autenticacao]
+tags: [tarefas, modulo/autenticacao]
 ---
 
 # Módulo Autenticação

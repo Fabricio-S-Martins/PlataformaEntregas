@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/compartilhado, tarefa/concluido]
+tags: [tarefas, modulo/compartilhado, tarefa/concluido]
 ---
 
 # 01 — Extrair Resultado&lt;T&gt; para um Shared Kernel entre módulos

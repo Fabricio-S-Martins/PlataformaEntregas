@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, tarefa/concluido]
+tags: [tarefas, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, tarefa/concluido]
 ---
 
 # 05 — Cobrir caso de uso de cadastro de Restaurante com testes automatizados

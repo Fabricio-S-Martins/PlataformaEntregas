@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, fluxo/catalogo-montagem-cardapio, tarefa/concluido]
+tags: [tarefas, modulo/catalogo, fluxo/catalogo-cadastro-restaurante, fluxo/catalogo-montagem-cardapio, tarefa/concluido]
 ---
 
 # 03 — Cobrir Restaurante, Cardapio e ItemCardapio com testes automatizados

@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/compartilhado]
+tags: [tarefas, modulo/compartilhado]
 ---
 
 # Compartilhado

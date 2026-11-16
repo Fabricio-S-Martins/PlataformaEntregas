@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pagamentos, tarefa/concluido]
+tags: [tarefas, modulo/pagamentos, tarefa/concluido]
 ---
 
 # 02 — Processar o pagamento ao receber o Pedido fechado, publicar a aprovação e cobrir com testes automatizados

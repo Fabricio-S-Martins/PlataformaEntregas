@@ -18,9 +18,12 @@ tags: [especificacao, modulo/pedidos, especificacao/rascunho]
 - **Item com valor:** cada item precisa de quantidade e preço maiores que zero.
 - **Pagamento exige itens:** pedido sem itens não pode ser pago.
 - **Cancelamento limitado:** o pedido só pode ser cancelado enquanto está Criado ou Pago.
-
-## Aguardando Validações
-- Validação 1: quem pode executar cada ação (cliente, restaurante, entregador)? Hoje qualquer usuário autenticado pode fechar ou pagar o pedido de outro cliente.
-- Validação 2: pedido que ficou Criado e nunca foi pago expira? Depois de quanto tempo?
-- Validação 3: o pedido pode misturar itens de restaurantes diferentes, ou todos os itens são do restaurante do pedido?
-- Validação 4: o preço do item vem do Catálogo ou é informado no pedido? E se o preço mudar depois?
+- **Fechar e pagar só pelo dono:** só o cliente dono do pedido o fecha e paga; outro usuário, mesmo autenticado, é recusado.
+- **Aceitar e preparar só pelo Restaurante:** só quem tem o papel Restaurante aceita o pedido e inicia o preparo.
+- **Entregar só pelo Entregador:** só quem tem o papel Entregador marca o pedido como Entregue.
+- **Preço do Catálogo:** o preço do item é o do Catálogo no momento em que o item é adicionado e fica gravado no item; mudança posterior no Catálogo não altera pedidos existentes.
+- **Pedido não pago expira:** pedido que fica Criado por 24 horas, desde a criação, sem ser pago vai para Cancelado sozinho.
+- **Itens do restaurante do pedido:** todo item do pedido pertence ao restaurante do pedido; item de outro restaurante é recusado.
+- **Cliente e restaurante obrigatórios:** todo pedido tem o cliente, que é o usuário autenticado, e um restaurante que existe.
+- **Cancelar pedido Pago reembolsa:** cancelar um pedido Pago, antes de o restaurante aceitar, devolve o valor ao cliente.
+- **Sem prazo para aceitar:** por enquanto o restaurante não tem prazo máximo para aceitar o pedido.

@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
+tags: [tarefas, modulo/autenticacao, fluxo/autenticacao-login, tarefa/concluido]
 ---
 
 # 11 — Cobrir geração e validação do token JWT com testes automatizados

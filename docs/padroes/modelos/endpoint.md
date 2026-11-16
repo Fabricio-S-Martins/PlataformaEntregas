@@ -1,3 +1,7 @@
+---
+tags: [padrao, camada/api]
+---
+
 # Endpoint
 
 ## Esqueleto

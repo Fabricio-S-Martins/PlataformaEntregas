@@ -1,3 +1,7 @@
+---
+tags: [padrao]
+---
+
 # Testes
 
 Regras dos testes do projeto; sem marca é obrigatória, `(preferível)` é recomendada.

@@ -14,6 +14,8 @@ tags: [especificacao, modulo/pagamentos, especificacao/rascunho]
 | Recusado | A cobrança foi negada. |
 | Falhou | Houve erro técnico ao processar, sem resposta sobre a cobrança. |
 | Gateway | Serviço externo que processa a cobrança. |
+| Estorno | Devolução ao cliente do valor de uma cobrança aprovada depois que o pedido já estava Cancelado. |
+| Reembolso | Devolução ao cliente do valor de um pedido que estava Pago e foi Cancelado. |
 
 ## Regras
 - **Nasce Pendente:** todo pagamento é criado Pendente.
@@ -23,9 +25,8 @@ tags: [especificacao, modulo/pagamentos, especificacao/rascunho]
 - **Sem cobrança duplicada:** pedido que já tem pagamento aprovado não é cobrado de novo.
 - **Recusa e falha não são erro:** cobrança negada deixa o pagamento Recusado e erro técnico o deixa Falhou, sem gerar erro para quem fechou o pedido.
 - **Só aprovado avisa:** só o pagamento aprovado gera o aviso de pagamento aprovado.
-
-## Aguardando Validações
-- Validação 1: o pagamento recusado ou que falhou cancela o pedido, ou o cliente pode tentar de novo? Quantas vezes?
-- Validação 2: se o pedido for cancelado enquanto o pagamento está em andamento e o gateway aprovar, o cliente é estornado? Hoje o caso só é registrado em log e o cliente fica cobrado.
-- Validação 3: quais formas de pagamento existem (cartão, Pix, dinheiro)?
-- Validação 4: o cliente pode pedir reembolso de pedido já pago e cancelado?
+- **Recusa não cancela o pedido:** pagamento Recusado ou Falhou não cancela o pedido; o cliente pode tentar de novo.
+- **Limite de tentativas:** cada pedido tem até 3 pagamentos Recusados ou Falhos; atingido o limite, não há nova cobrança desse pedido.
+- **Estorno automático:** pagamento aprovado de um pedido que já estava Cancelado é estornado sem ação de ninguém, e o estorno é registrado.
+- **Só cartão de crédito:** a única forma de pagamento é o cartão de crédito.
+- **Reembolso automático e integral:** pedido Pago que é Cancelado tem o valor pago devolvido por inteiro, sem ação de ninguém, e a devolução é registrada.

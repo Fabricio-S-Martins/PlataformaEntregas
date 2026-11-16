@@ -1,3 +1,7 @@
+---
+tags: [padrao]
+---
+
 # Convenções da linguagem
 
 Convenções de C# do projeto; todas `(preferível)`.

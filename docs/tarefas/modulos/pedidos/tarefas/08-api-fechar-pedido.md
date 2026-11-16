@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/pedidos, fluxo/pedido-operacao, camada/api, tarefa/bloqueado]
+tags: [tarefas, modulo/pedidos, fluxo/pedido-operacao, camada/api, tarefa/bloqueado]
 ---
 
 # 08 — Expor o fechamento do Pedido publicando o contrato de integração e exigir autenticação no confirmar-pagamento

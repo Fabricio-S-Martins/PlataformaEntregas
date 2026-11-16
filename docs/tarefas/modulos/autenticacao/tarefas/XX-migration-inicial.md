@@ -1,5 +1,5 @@
 ---
-tags: [tarefa, modulo/autenticacao, tarefa/concluido]
+tags: [tarefas, modulo/autenticacao, tarefa/concluido]
 ---
 
 # XX — Infraestrutura: fábrica de design-time e primeira Migration
